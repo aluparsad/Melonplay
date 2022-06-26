@@ -1,0 +1,129 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+body {
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body::before {
+  position: absolute;
+  content: "";
+  background: url("../images/trees-gdf54ce2a8_1280.jpg") no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  opacity: .5;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  z-index: -1;
+}
+
+h2 {
+  width: 25%;
+  text-align: center;
+  display: block;
+  margin: auto;
+  margin-top: 8%;
+  font-size: 35px;
+}
+
+h2::before {
+  font-family: 'Italianno', cursive;
+  content: "Melon";
+  color: #6a6ada;
+  text-decoration: underline;
+}
+
+h2::after {
+  content: "play";
+  color: white;
+  text-decoration: underline;
+}
+
+.container {
+  background: white;
+  width: 60vw;
+  height: 60vh;
+  display: block;
+  margin: auto;
+  margin-top: 8%;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container h3 {
+  font-size: 35px;
+}
+
+.container #input-tags {
+  width: 90%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container #input-tags .input {
+  width: 40%;
+  font-size: 18px;
+  margin: 3% 2%;
+}
+
+.container #input-tags .input label {
+  font-size: 18px;
+}
+
+.container #input-tags .input input {
+  border: none;
+  border-bottom: 2px solid blue;
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 15px;
+  padding: 6px 6px;
+  width: 90%;
+}
+
+.container .btn {
+  width: 40%;
+  font-size: 18px;
+  padding: 5px 20px;
+  background: #6a6ada;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=signup.css.map */

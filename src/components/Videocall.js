@@ -1,0 +1,54 @@
+import React from 'react';
+import '../sass/video_call.css';
+
+export default function Video_call() {
+    return (
+        <>
+            <div className="container">
+                <div className="video-call">
+                    <div className="frnd frnd-1"></div>
+                    <div className="frnd frnd-2"></div>
+                    <div className="frnd frnd-3"></div>
+                    <div className="frnd frnd-4"></div>
+                </div>
+                <div className="right">
+                    <div className="video-members">
+                        <div className="video-heading">
+                            <h3>Participants (5)</h3>
+                        </div>
+                        <div className="participants">
+                            <div className="participant">Rohit sharma</div>
+                            <div className="participant">Harsh sharma</div>
+                            <div className="participant">yogesh swami</div>
+                            <div className="participant">anand</div>
+                            <div className="participant">nikhil</div>
+                        </div>
+                    </div>
+                    <div className="chatting">
+                        <div className="chat-heading">
+                            <h3>Chat</h3>
+                            <div className="chats">
+                                <div className="message-right">Rohit:hello how are you</div>
+                                <div className="message-left">Dogesh:i am fine</div>
+                                <div className="message-right">Rohit:hello how are you</div>
+                                <div className="message-left">Dogesh:i am fine</div>
+                                <div className="message-right">Rohit:hello how are you</div>
+                                <div className="message-left">Dogesh:i am fine</div>
+                                <div className="message-right">Rohit:hello how are you</div>
+                                <div className="message-left">Dogesh:i am fine</div>
+                                <div className="message-right">Rohit:hello how are you</div>
+                                <div className="message-left">Dogesh:i am fine</div>
+                                <div className="message-right">Rohit:hello how are you</div>
+                                <div className="message-left">Dogesh:i am fine</div>
+                                <div className="message-right">Rohit:hello how are you</div>
+                                <div className="message-left">Dogesh:i am fine</div>
+                                <div className="message-right">Rohit:hello how are you</div>
+                                <div className="message-left">Dogesh:i am fine</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}

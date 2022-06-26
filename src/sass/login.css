@@ -1,0 +1,155 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+body {
+  background: black;
+}
+
+body::before {
+  position: absolute;
+  content: "";
+  background: url("../images/trees-gdf54ce2a8_1280.jpg");
+  background-size: cover;
+  opacity: .5;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h1 {
+  width: 15%;
+  text-align: center;
+  display: block;
+  margin: auto;
+  margin-top: 7%;
+  font-size: 35px;
+}
+
+h1::before {
+  font-family: 'Italianno', cursive;
+  content: "Melon";
+  color: #6a6ada;
+  text-decoration: underline;
+}
+
+h1::after {
+  content: "play";
+  color: white;
+  text-decoration: underline;
+}
+
+.container {
+  background: white;
+  width: 40%;
+  height: 60vh;
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container h2 {
+  margin-bottom: 2%;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container .login {
+  width: 80%;
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .login .input {
+  width: 90%;
+  margin: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .login .input input {
+  font-weight: lighter;
+  font-size: 15px;
+  width: 80%;
+  padding: 5px 20px;
+  font-style: italic;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.container .login .anchor {
+  margin: 3% 0% 0% 0%;
+  font-size: 18px;
+  width: 90%;
+}
+
+.container .login .anchor #keep-login {
+  margin-left: 7%;
+  margin-right: 2%;
+}
+
+.container .login .anchor #forget-password {
+  margin-left: 15%;
+  color: blue;
+}
+
+.container .login .btn {
+  margin-top: 10%;
+  width: 80%;
+  font-size: 16px;
+  padding: 5px 20px;
+  background: #6a6ada;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.container .login .need-an-account {
+  margin-top: 10%;
+  font-size: 18px;
+  font-style: initial;
+}
+/*# sourceMappingURL=login.css.map */

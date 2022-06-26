@@ -1,0 +1,108 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+body {
+  background: black;
+}
+
+.container {
+  border: 2px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.video-call {
+  width: 71vw;
+  height: 93vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.video-call .frnd {
+  background: white;
+  width: 22vw;
+  height: 25vh;
+  margin-left: 1%;
+  border-radius: 10px;
+}
+
+.video-call .frnd-1 {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 67vw;
+  height: 65vh;
+  margin-top: 1%;
+}
+
+.right {
+  width: 32vw;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.right .video-members {
+  height: 50vh;
+}
+
+.right .video-members .video-heading {
+  text-align: center;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.right .video-members .participants {
+  border: 2px solid red;
+  height: 45vh;
+  overflow-y: scroll;
+}
+
+.right .video-members .participants .participant {
+  color: white;
+  display: block;
+  margin: 1% 0px;
+}
+
+.right .chatting {
+  height: 50vh;
+}
+
+.right .chatting .chat-heading {
+  color: white;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+.right .chatting .chats {
+  border: 2px solid white;
+  height: 39vh;
+  background: blue;
+  overflow-y: scroll;
+}
+
+.right .chatting .chats .message-left {
+  float: left;
+  display: block;
+  clear: both;
+}
+
+.right .chatting .chats .message-right {
+  float: right;
+  display: block;
+  clear: both;
+}
+/*# sourceMappingURL=video_call.css.map */
