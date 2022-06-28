@@ -1,5 +1,6 @@
 import React from 'react';
 import '../sass/video_call.css';
+// import MicIcon from "@mui/icons-material/Mic";
 
 export default function Video_call() {
     return (
@@ -17,7 +18,9 @@ export default function Video_call() {
                             <h3>Participants (5)</h3>
                         </div>
                         <div className="participants">
-                            <div className="participant">Rohit sharma</div>
+                            <div className="participant">Rohit sharma
+                                <i class="fa-solid fa-microphone"></i>
+                            </div>
                             <div className="participant">Harsh sharma</div>
                             <div className="participant">yogesh swami</div>
                             <div className="participant">anand</div>
@@ -27,24 +30,14 @@ export default function Video_call() {
                     <div className="chatting">
                         <div className="chat-heading">
                             <h3>Chat</h3>
-                            <div className="chats">
-                                <div className="message-right">Rohit:hello how are you</div>
-                                <div className="message-left">Dogesh:i am fine</div>
-                                <div className="message-right">Rohit:hello how are you</div>
-                                <div className="message-left">Dogesh:i am fine</div>
-                                <div className="message-right">Rohit:hello how are you</div>
-                                <div className="message-left">Dogesh:i am fine</div>
-                                <div className="message-right">Rohit:hello how are you</div>
-                                <div className="message-left">Dogesh:i am fine</div>
-                                <div className="message-right">Rohit:hello how are you</div>
-                                <div className="message-left">Dogesh:i am fine</div>
-                                <div className="message-right">Rohit:hello how are you</div>
-                                <div className="message-left">Dogesh:i am fine</div>
-                                <div className="message-right">Rohit:hello how are you</div>
-                                <div className="message-left">Dogesh:i am fine</div>
-                                <div className="message-right">Rohit:hello how are you</div>
-                                <div className="message-left">Dogesh:i am fine</div>
-                            </div>
+                        </div>
+                        <div className="chats">
+                            <div className="message-right">Rohit : hello how are you</div>
+                            <div className="message-left">dogesh : i am fine</div>
+                        </div>
+                        <div className="message">
+                            <input type="text" placeholder='Type to write a message' />
+                            <button className="btn">Send</button>
                         </div>
                     </div>
                 </div>

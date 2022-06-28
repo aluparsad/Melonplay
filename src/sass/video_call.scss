@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    border: 2px solid white;
+    // border: 2px solid white;
     display: flex;
 }
 
@@ -55,46 +55,92 @@ body {
             text-align: center;
             color: white;
             border-bottom: 1px solid red;
+            padding: 7px 0px;
         }
 
         .participants {
             border: 2px solid red;
             height: 45vh;
             overflow-y: scroll;
-            .participant{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .participant {
                 color: white;
                 display: block;
-                margin: 1% 0px;
+                margin: 2% 0px;
+                // border: 2px solid white;
+                text-align: left;
+                width: 300px;
+                padding: 5px 20px;
+                font-size: 20px;
+                background: #161516;
             }
         }
     }
 
     .chatting {
-        // background: blue;
         height: 50vh;
 
         .chat-heading {
             color: white;
             text-align: center;
-            border-bottom: 1px solid white;
+            background: rgb(21, 18, 18);
         }
 
         .chats {
-            border: 2px solid white;
-            height: 39vh;
-            background: blue;
+            height: 36vh;
+            // background: blue;
+            color: white;
             overflow-y: scroll;
 
             .message-left {
                 float: left;
                 display: block;
                 clear: both;
+                padding: 5px 10px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                background: #474348;
+                margin: 2% 0px;
             }
 
             .message-right {
                 float: right;
                 display: block;
                 clear: both;
+                padding: 5px 10px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                background: #474348;
+                margin: 2% 0px;
+
+            }
+        }
+
+        .message {
+            display: flex;
+
+            input {
+                font-size: 18px;
+                border: none;
+                width: 400px;
+                background: none;
+                color: white;
+                padding: 0px 10px;
+            }
+
+            .btn {
+                font-size: 15px;
+                width: 90px;
+                color: white;
+                background: blue;
+                border: none;
+                cursor: pointer;
+                border-radius: 15px;
             }
         }
     }

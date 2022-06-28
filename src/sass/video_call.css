@@ -9,7 +9,6 @@ body {
 }
 
 .container {
-  border: 2px solid white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,19 +61,35 @@ body {
 .right .video-members .video-heading {
   text-align: center;
   color: white;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid red;
+  padding: 7px 0px;
 }
 
 .right .video-members .participants {
   border: 2px solid red;
   height: 45vh;
   overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .right .video-members .participants .participant {
   color: white;
   display: block;
-  margin: 1% 0px;
+  margin: 2% 0px;
+  text-align: left;
+  width: 300px;
+  padding: 5px 20px;
+  font-size: 20px;
+  background: #161516;
 }
 
 .right .chatting {
@@ -84,13 +99,12 @@ body {
 .right .chatting .chat-heading {
   color: white;
   text-align: center;
-  border-bottom: 1px solid white;
+  background: #151212;
 }
 
 .right .chatting .chats {
-  border: 2px solid white;
-  height: 39vh;
-  background: blue;
+  height: 36vh;
+  color: white;
   overflow-y: scroll;
 }
 
@@ -98,11 +112,48 @@ body {
   float: left;
   display: block;
   clear: both;
+  padding: 5px 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #474348;
+  margin: 2% 0px;
 }
 
 .right .chatting .chats .message-right {
   float: right;
   display: block;
   clear: both;
+  padding: 5px 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: #474348;
+  margin: 2% 0px;
+}
+
+.right .chatting .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.right .chatting .message input {
+  font-size: 18px;
+  border: none;
+  width: 400px;
+  background: none;
+  color: white;
+  padding: 0px 10px;
+}
+
+.right .chatting .message .btn {
+  font-size: 15px;
+  width: 90px;
+  color: white;
+  background: blue;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
 }
 /*# sourceMappingURL=video_call.css.map */
