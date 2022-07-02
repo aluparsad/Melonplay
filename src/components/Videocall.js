@@ -22,7 +22,7 @@ export default function Video_call() {
                                 <i class="fa-solid fa-microphone"></i>
                             </div>
                             <div className="participant">Harsh sharma</div>
-                            <div className="participant">yogesh swami</div>
+                            <div className="participant">Dogesh swami</div>
                             <div className="participant">anand</div>
                             <div className="participant">nikhil</div>
                         </div>

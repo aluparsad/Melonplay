@@ -1,10 +1,14 @@
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 // import Login from './components/login';
-import Navbar from './components/Navbar';
 // import Signup from './components/Signup';
+import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Videocall from './components/Videocall';
+import About from './components/About';
+import Chatting from './components/Chatting';
+import Contactus from './components/Contactus';
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -18,10 +22,11 @@ function App() {
       <Navbar />
       <BrowserRouter>
         <Routes>
-          <Route path='' element={<Home />} />
-          {/* <Route path='' element={<About/>} /> */}
+          <Route path='/' element={<Home />} />
+          <Route path='/About' element={<About />} />
           <Route path='/Videocall' element={<Videocall />} />
-          {/* <Route path = '/Chatting' element = {</>} */}
+          <Route path='/Chatting' element={<Chatting />} />
+          <Route path='/Contactus' element={<Contactus />} />
         </Routes>
       </BrowserRouter>
     </>

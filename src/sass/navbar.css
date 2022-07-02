@@ -3,6 +3,10 @@
   padding: 0px;
 }
 
+body {
+  color: white;
+}
+
 .navbar {
   border-bottom: 1px solid whitesmoke;
   display: -webkit-box;
