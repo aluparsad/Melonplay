@@ -26,7 +26,7 @@ function App() {
           <Route path='/About' element={<About />} />
           <Route path='/Videocall' element={<Videocall />} />
           <Route path='/Chatting' element={<Chatting />} />
-          <Route path='/Contactus' element={<Contactus />} />
+          {/* <Route path='/Contactus' element={<Contactus />} /> */}
         </Routes>
       </BrowserRouter>
     </>
