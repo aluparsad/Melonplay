@@ -1,221 +1,207 @@
 * {
     margin: 0px;
     padding: 0px;
-    overflow: hidden;
 }
 
-// body {
-//     background: black;
-// }
-
-.container {
+.video-call-container {
+    // border: 2px solid black;
+    height: 93vh;
     display: flex;
-}
 
-.container-2 {
-    .video-call {
-        // border: 2px solid white;
-        width: 67vw;
-        height: 85vh;
-        display: flex;
-        flex-wrap: wrap;
+    .video-call-left {
+        // border: 2px solid black;
+        border-right: 1px solid black;
+        width: 65vw;
 
-        // background: black;
-        .frnd {
-            background: black;
-            width: 20vw;
-            height: 25vh;
-            margin: 10px 10px;
-            border-radius: 20px;
-        }
-
-        .frnd-1 {
-            width: 63vw;
-            height: 55vh;
-        }
-    }
-
-    .functions {
-        // border: 2px solid blue;
-        height: 7vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .icons {
+        .video-call {
+            // border: 2px solid red;
+            height: 86vh;
             display: flex;
-            width: 200px;
-            margin: 0px 30px;
+            flex-wrap: wrap;
 
-            .mic {
-                color: rgb(75, 75, 255);
+            // overflow-y: auto;
+            .friend {
+                background: black;
+                border-radius: 20px;
+                width: 20vw;
+                height: 20vh;
+                margin: 1% 1%;
             }
 
-            .icon-video {
+            .friend-1 {
+                // border: 2px solid blue;
+                width: 60vw;
+                height: 55vh;
+                margin: 1%;
+            }
+        }
+
+        .buttons {
+            // border: 2px solid blue;
+            height: 7vh;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid black;
+
+            .buttons-section-mic {
+                color: blue;
+                margin: 0px 20px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .buttons-section-video {
                 color: black;
+                margin: 0px 20px;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
 
-            .i {
-                margin: 0px 30px;
+            .end-meeting {
+                font-size: 18px;
+                padding: 5px 20px;
+                color: white;
+                background: red;
+                border-radius: 20px;
+                margin: 0px 20px;
 
                 &:hover {
                     cursor: pointer;
                 }
             }
         }
-
-        .end-meeting {
-            font-size: 20px;
-            padding: 5px 20px;
-            color: white;
-            background: red;
-            border: none;
-            border-radius: 20px;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
     }
-}
 
-.right {
-    // border: 2px solid red;
-    width: 32vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
+    .participants-chats-right {
+        // border: 2px solid blue;
+        width: 35vw;
+        height: 92vh;
+        display: flex;
+        flex-direction: column;
 
-    .video-members {
-        height: 50vh;
-
-        .video-heading {
-            text-align: center;
-            color: black;
-            padding: 7px 0px;
-            // background: rgb(21, 18, 18);
-        }
-
-        .participants {
+        .participants-section {
             // border: 2px solid red;
-            // display: flex;
-            // flex-direction: column;
-            // align-items: center;
-            height: 45vh;
-            overflow-y: scroll;
+            height: 46vh;
 
-            .participant {
-                text-align: left;
-                // border: 2px solid white;
-                // background: rgb(45, 43, 43);
-                font-size: 21px;
-                padding: 10px 15px 10px 20px;
-                width: 320px;
-                margin: 20px 0px 20px 30px;
-                border-radius: 20px;
-                display: flex;
+            .participant-heading {
+                // border: 2px solid black;
+                border-bottom: 1px solid black;
                 color: black;
+                text-align: center;
+                font-size: 14px;
+            }
 
-                .icons {
-                    // border: 2px solid white;
+            .participants {
+                // border: 2px solid black;
+                height: 41vh;
+                overflow-y: auto;
+                padding: 5px 40px;
+
+                .participant {
+                    color: black;
+                    border: 1px solid black;
+                    width: 27vw;
+                    font-size: 20px;
+                    padding: 5px 0px 5px 20px;
+                    margin: 20px 0px;
+                    border-radius: 20px;
                     display: flex;
-                    margin-left: auto;
 
-                    .mic {
-                        color: rgb(75, 75, 255);
-                    }
+                    .participant-icons {
+                        // border: 2px solid black;
+                        width: 70px;
+                        margin-left: auto;
 
-                    .video {
-                        color: black;
-                    }
+                        .participant-mic {
+                            color: blue;
+                            display: inline;
 
-                    .i {
-                        margin-left: 10px;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
 
-                        &:hover {
-                            cursor: pointer;
-                            color: white;
+                        .participant-video {
+                            display: inline;
+                            margin-left: 20px;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
+            }
+        }
 
-                &:hover {
-                    color: white;
-                    background-color: #474348;
-                    // cursor: pointer;
+        .chatting-section {
+            // border: 2px solid black;
+            height: 46vh;
+
+            .chat-heading {
+                // border: 2px solid black;
+                border-bottom: 1px solid black;
+                border-top: 1px solid black;
+                color: black;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+            }
+
+            .chats {
+                // border: 2px solid black;
+                height: 35vh;
+                color: black;
+                overflow-y: auto;
+
+                .message {
+                    border: 1px solid black;
+                    margin: 5px 10px;
+                    padding: 4px 10px;
+                }
+
+                .message-left {
+                    float: left;
+                    clear: both;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                }
+
+                .message-right {
+                    float: right;
+                    clear: both;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                    border-bottom-left-radius: 20px;
                 }
             }
-        }
-    }
 
-    .chatting {
-        height: 50vh;
+            .input {
+                // border: 2px solid blue;
+                height: 5vh;
+                margin-top: 1%;
 
-        .chat-heading {
-            color: black;
-            text-align: center;
-            // background: rgb(21, 18, 18);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 5px 0px;
+                input {
+                    font-size: 18px;
+                    width: 360px;
+                    padding: 3px 4px;
+                }
 
-            .chat-icon {
-                margin-right: 5px;
-            }
-        }
-
-        .chats {
-            height: 34vh;
-            // background: blue;
-            color: white;
-            overflow-y: scroll;
-
-            .message-left {
-                float: left;
-                display: block;
-                clear: both;
-                padding: 5px 10px;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
-                border-bottom-right-radius: 20px;
-                background: #474348;
-                margin: 2% 0px;
-            }
-
-            .message-right {
-                float: right;
-                display: block;
-                clear: both;
-                padding: 5px 10px;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
-                border-bottom-left-radius: 20px;
-                background: #474348;
-                margin: 2% 0px;
-            }
-        }
-
-        .message {
-            display: flex;
-
-            input {
-                font-size: 18px;
-                border: none;
-                width: 400px;
-                background: none;
-                color: black;
-                padding: 0px 10px;
-            }
-
-            .btn {
-                font-size: 15px;
-                width: 90px;
-                color: white;
-                background: blue;
-                border: none;
-                cursor: pointer;
-                border-radius: 15px;
+                .submit {
+                    font-size: 16px;
+                    padding: 3px 20px;
+                    background: blue;
+                    color: whitesmoke;
+                    border-radius: 20px;
+                }
             }
         }
     }

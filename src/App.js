@@ -6,8 +6,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Videocall from './components/Videocall';
 import About from './components/About';
-import Chatting from './components/Chatting';
-import Contactus from './components/Contactus';
+
 
 import {
   BrowserRouter as Router,
