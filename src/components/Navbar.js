@@ -44,12 +44,12 @@ export default function Navbar() {
                             VideoCall
                         </a>
                     </li>
-                    <li>
+                    {/* <li>
                         <a href="/chatting">
                             Chatting
                         </a>
-                    </li>
-                    <li>Contact Us</li>
+                    </li> */}
+                    {/* <li>Contact Us</li> */}
                 </ul>
                 <div className="buttons">
                     <button className="btn btn-login">

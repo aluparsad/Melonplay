@@ -1,4 +1,139 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
+}
+
+.container {
+    // border: 2px solid black;
+    height: 93vh;
+    width: 100vw;
+
+    .left {
+        width: 60vw;
+        // border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+
+        .tag-line {
+            // border: 2px solid blue;
+            height: 7vh;
+        }
+
+        .image {
+            // border: 2px solid red;
+            height: 90vh;
+            background: url('../images/bg1.jpg') no-repeat center;
+            background-size: 850px auto;
+        }
+    }
+
+    .right {
+        // border: 2px solid black;
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+
+        // align-items: center;
+        h2 {
+            // border: 2px solid black;
+            text-align: center;
+            margin-top: 5%;
+            padding: 5px 10px;
+
+            &::before {
+                content: "Melon";
+                color: blue;
+                font-size: 40px;
+                font-family: 'Italianno', cursive;
+            }
+
+            &::after {
+                content: "Play";
+                color: black;
+                font-size: 40px;
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+
+        h3 {
+            color: black;
+            text-align: left;
+            font-size: 40px;
+            margin-top: 5%;
+        }
+
+        h4 {
+            color: black;
+            margin-top: 3%;
+        }
+
+        p {
+            color: black;
+            margin-top: 2%;
+        }
+
+        .start-call-btn {
+            width: 200px;
+            margin-top: 5%;
+            margin-left: 15%;
+            background: blue;
+            color: white;
+            font-size: 18px;
+            padding: 5px 20px;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .bottom {
+            // border: 2px solid black;
+            margin-top: 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 32vh;
+            p {
+                text-align: center;
+
+                h5 {
+                    display: inline;
+
+                    &::before {
+                        content: "Melon";
+                        color: blue;
+                        // font-size: 40px;
+                        font-family: 'Italianno', cursive;
+                    }
+
+                    &::after {
+                        content: "Play";
+                        color: black;
+                        // font-size: 40px;
+                        font-family: 'Roboto', sans-serif;
+                    }
+                }
+            }
+            .know-more{
+                margin-top: 5%;
+                font-size: 18px;
+                padding: 5px 20px;
+                background: orangered;
+                color: whitesmoke;  
+                border-radius: 20px;
+            }
+        }
+
+        animation-name: right;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+
+        @keyframes right {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    }
 }

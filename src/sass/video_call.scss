@@ -4,9 +4,9 @@
     overflow: hidden;
 }
 
-body {
-    background: black;
-}
+// body {
+//     background: black;
+// }
 
 .container {
     display: flex;
@@ -18,17 +18,19 @@ body {
         width: 67vw;
         height: 85vh;
         display: flex;
-        flex-wrap:wrap;
-        background: black;
+        flex-wrap: wrap;
+
+        // background: black;
         .frnd {
-            background: white;
+            background: black;
             width: 20vw;
             height: 25vh;
             margin: 10px 10px;
             border-radius: 20px;
         }
-        .frnd-1{
-            width:63vw;
+
+        .frnd-1 {
+            width: 63vw;
             height: 55vh;
         }
     }
@@ -50,7 +52,7 @@ body {
             }
 
             .icon-video {
-                color: whitesmoke;
+                color: black;
             }
 
             .i {
@@ -89,9 +91,9 @@ body {
 
         .video-heading {
             text-align: center;
-            color: white;
+            color: black;
             padding: 7px 0px;
-            background: rgb(21, 18, 18);
+            // background: rgb(21, 18, 18);
         }
 
         .participants {
@@ -112,6 +114,7 @@ body {
                 margin: 20px 0px 20px 30px;
                 border-radius: 20px;
                 display: flex;
+                color: black;
 
                 .icons {
                     // border: 2px solid white;
@@ -123,7 +126,7 @@ body {
                     }
 
                     .video {
-                        color: white;
+                        color: black;
                     }
 
                     .i {
@@ -131,11 +134,13 @@ body {
 
                         &:hover {
                             cursor: pointer;
+                            color: white;
                         }
                     }
                 }
 
                 &:hover {
+                    color: white;
                     background-color: #474348;
                     // cursor: pointer;
                 }
@@ -147,9 +152,9 @@ body {
         height: 50vh;
 
         .chat-heading {
-            color: white;
+            color: black;
             text-align: center;
-            background: rgb(21, 18, 18);
+            // background: rgb(21, 18, 18);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -188,7 +193,6 @@ body {
                 border-bottom-left-radius: 20px;
                 background: #474348;
                 margin: 2% 0px;
-
             }
         }
 
@@ -200,7 +204,7 @@ body {
                 border: none;
                 width: 400px;
                 background: none;
-                color: white;
+                color: black;
                 padding: 0px 10px;
             }
 

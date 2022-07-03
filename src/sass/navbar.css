@@ -31,7 +31,7 @@ body {
 
 .navbar h1::after {
   content: "play";
-  color: whitesmoke;
+  color: black;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -51,7 +51,7 @@ body {
 }
 
 .navbar ul li a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 

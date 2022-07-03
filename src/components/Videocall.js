@@ -2,17 +2,9 @@ import React from 'react';
 import '../sass/video_call.css';
 import { FaHeart, FaMicrophone, FaVideo, FaComment, FaMicrophoneSlash, FaVideoSlash } from 'react-icons/fa';
 import { icons } from 'react-icons/lib';
-
-
+import { Mic } from '@material-ui/icons';
 
 export default function Video_call() {
-    const changeicon = () => {
-        <div className="mic">
-            <FaMicrophoneSlash />
-        </div>
-    }
-
-
     return (
         <>
             <div className="container">
@@ -27,12 +19,12 @@ export default function Video_call() {
                     <div className="functions">
                         <div className="icons">
                             <div className="mic i">
-                                <FaMicrophone size={28} onClick={changeicon} />
-                                {/* <FaMicrophoneSlash size={28}/> */}
+                                {/* <FaMicrophone size={28} /> */}
+                                <FaMicrophoneSlash size={28} />
                             </div>
                             <div className="icon-video i">
-                                <FaVideo size={28} />
-                                {/* <FaVideoSlash size={28}/> */}
+                                {/* <FaVideo size={28} /> */}
+                                <FaVideoSlash size={28} />
                             </div>
                         </div>
                         <button className="end-meeting">
@@ -52,7 +44,8 @@ export default function Video_call() {
                                         <FaMicrophone />
                                     </div>
                                     <div className="i video">
-                                        <FaVideo />
+                                        {/* <FaVideo /> */}
+                                        <FaVideoSlash />
                                     </div>
                                 </div>
                             </div>
@@ -62,7 +55,8 @@ export default function Video_call() {
                                         <FaMicrophone />
                                     </div>
                                     <div className="i video">
-                                        <FaVideo />
+                                        {/* <FaVideo /> */}
+                                        <FaVideoSlash />
                                     </div>
                                 </div></div>
                             <div className="participant">Dogesh swami
@@ -71,7 +65,8 @@ export default function Video_call() {
                                         <FaMicrophone />
                                     </div>
                                     <div className="i video">
-                                        <FaVideo />
+                                        {/* <FaVideo /> */}
+                                        <FaVideoSlash />
                                     </div>
                                 </div></div>
                             <div className="participant">anand samashiya
@@ -80,7 +75,8 @@ export default function Video_call() {
                                         <FaMicrophone />
                                     </div>
                                     <div className="i video">
-                                        <FaVideo />
+                                        {/* <FaVideo /> */}
+                                        <FaVideoSlash />
                                     </div>
                                 </div></div>
                             <div className="participant">nikhil
@@ -90,7 +86,8 @@ export default function Video_call() {
                                         <FaMicrophone />
                                     </div>
                                     <div className="i video">
-                                        <FaVideo />
+                                        {/* <FaVideo /> */}
+                                        <FaVideoSlash />
                                     </div>
                                 </div></div>
                             <div className="participant">Harish motwani<div className="icons">
@@ -98,7 +95,8 @@ export default function Video_call() {
                                     <FaMicrophone />
                                 </div>
                                 <div className="i video">
-                                    <FaVideo />
+                                    {/* <FaVideo /> */}
+                                    <FaVideoSlash />
                                 </div>
                             </div></div>
                         </div>

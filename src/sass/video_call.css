@@ -4,10 +4,6 @@
   overflow: hidden;
 }
 
-body {
-  background: black;
-}
-
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,11 +18,10 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background: black;
 }
 
 .container-2 .video-call .frnd {
-  background: white;
+  background: black;
   width: 20vw;
   height: 25vh;
   margin: 10px 10px;
@@ -64,7 +59,7 @@ body {
 }
 
 .container-2 .functions .icons .icon-video {
-  color: whitesmoke;
+  color: black;
 }
 
 .container-2 .functions .icons .i {
@@ -106,9 +101,8 @@ body {
 
 .right .video-members .video-heading {
   text-align: center;
-  color: white;
+  color: black;
   padding: 7px 0px;
-  background: #151212;
 }
 
 .right .video-members .participants {
@@ -126,6 +120,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: black;
 }
 
 .right .video-members .participants .participant .icons {
@@ -140,7 +135,7 @@ body {
 }
 
 .right .video-members .participants .participant .icons .video {
-  color: white;
+  color: black;
 }
 
 .right .video-members .participants .participant .icons .i {
@@ -149,9 +144,11 @@ body {
 
 .right .video-members .participants .participant .icons .i:hover {
   cursor: pointer;
+  color: white;
 }
 
 .right .video-members .participants .participant:hover {
+  color: white;
   background-color: #474348;
 }
 
@@ -160,9 +157,8 @@ body {
 }
 
 .right .chatting .chat-heading {
-  color: white;
+  color: black;
   text-align: center;
-  background: #151212;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,7 +216,7 @@ body {
   border: none;
   width: 400px;
   background: none;
-  color: white;
+  color: black;
   padding: 0px 10px;
 }
 

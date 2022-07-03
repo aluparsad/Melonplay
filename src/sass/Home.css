@@ -2,4 +2,158 @@
   margin: 0px;
   padding: 0px;
 }
+
+.container {
+  height: 93vh;
+  width: 100vw;
+}
+
+.container .left {
+  width: 60vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .left .tag-line {
+  height: 7vh;
+}
+
+.container .left .image {
+  height: 90vh;
+  background: url("../images/bg1.jpg") no-repeat center;
+  background-size: 850px auto;
+}
+
+.container .right {
+  width: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation-name: right;
+          animation-name: right;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.container .right h2 {
+  text-align: center;
+  margin-top: 5%;
+  padding: 5px 10px;
+}
+
+.container .right h2::before {
+  content: "Melon";
+  color: blue;
+  font-size: 40px;
+  font-family: 'Italianno', cursive;
+}
+
+.container .right h2::after {
+  content: "Play";
+  color: black;
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container .right h3 {
+  color: black;
+  text-align: left;
+  font-size: 40px;
+  margin-top: 5%;
+}
+
+.container .right h4 {
+  color: black;
+  margin-top: 3%;
+}
+
+.container .right p {
+  color: black;
+  margin-top: 2%;
+}
+
+.container .right .start-call-btn {
+  width: 200px;
+  margin-top: 5%;
+  margin-left: 15%;
+  background: blue;
+  color: white;
+  font-size: 18px;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 20px;
+}
+
+.container .right .bottom {
+  margin-top: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 32vh;
+}
+
+.container .right .bottom p {
+  text-align: center;
+}
+
+.container .right .bottom p h5 {
+  display: inline;
+}
+
+.container .right .bottom p h5::before {
+  content: "Melon";
+  color: blue;
+  font-family: 'Italianno', cursive;
+}
+
+.container .right .bottom p h5::after {
+  content: "Play";
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container .right .bottom .know-more {
+  margin-top: 5%;
+  font-size: 18px;
+  padding: 5px 20px;
+  background: orangered;
+  color: whitesmoke;
+  border-radius: 20px;
+}
+
+@-webkit-keyframes right {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes right {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=Home.css.map */
