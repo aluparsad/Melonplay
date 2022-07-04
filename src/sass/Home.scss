@@ -9,6 +9,7 @@
     height: 93vh;
     width: 100vw;
     display: flex;
+
     .left {
         width: 60vw;
         // border: 2px solid black;
@@ -83,6 +84,9 @@
             padding: 5px 20px;
             border: none;
             border-radius: 20px;
+            &:hover{
+                cursor: pointer;
+            }
         }
 
         .bottom {
@@ -97,27 +101,15 @@
                 // border: 2px solid black;
                 margin-top: 1%;
                 width: 450px;
-                margin-left: 10px;
-                p {
-                    text-align: center;
-                    font-size: 20px;
-                    h5 {
-                        display: inline;
-                        font-size: 20px;
-                        &::before {
-                            content: "Melon";
-                            color: blue;
-                            // font-size: 40px;
-                            font-family: 'Italianno', cursive;
-                        }
-
-                        &::after {
-                            content: "Play";
-                            color: black;
-                            // font-size: 40px;
-                            font-family: 'Roboto', sans-serif;
-                        }
-                    }
+                margin-left: 50px;
+                text-align: left;
+                h5 {
+                    display: inline;
+                    font-size: 40px;
+                    color: black;
+                }
+                p{
+                    color: black;
                 }
             }
 
@@ -129,6 +121,9 @@
                 color: whitesmoke;
                 border-radius: 20px;
                 margin-left: 50px;
+                &:hover{
+                    cursor: pointer;
+                }
             }
         }
 

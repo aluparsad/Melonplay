@@ -157,7 +157,7 @@
 
             .chats {
                 // border: 2px solid black;
-                height: 35vh;
+                height: 37vh;
                 color: black;
                 overflow-y: auto;
 
@@ -187,12 +187,16 @@
             .input {
                 // border: 2px solid blue;
                 height: 5vh;
-                margin-top: 1%;
+                position: absolute;
+                bottom: 0px;
 
                 input {
                     font-size: 18px;
-                    width: 360px;
+                    width: 350px;
                     padding: 3px 4px;
+                    border: none;
+                    border-bottom: 2px solid blue;
+                    margin-left: 20px;
                 }
 
                 .submit {

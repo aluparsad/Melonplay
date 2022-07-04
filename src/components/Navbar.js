@@ -35,7 +35,7 @@ export default function Navbar() {
                     </li>
                     <li>
                         <a href="/about">
-                            About
+                            Services
                         </a>
                     </li>
                     <li>
@@ -55,7 +55,6 @@ export default function Navbar() {
                         Login
                     </button>
                     <button className="btn btn-signup">Signup</button>
-                    {/* <button className="btn btn-darkmode">Enable Dark Mode</button> */}
                 </div>
             </div>
         </>

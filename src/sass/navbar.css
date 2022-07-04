@@ -67,66 +67,50 @@ body {
   cursor: pointer;
 }
 
-.navbar .btn-login {
-  margin: 10px;
-  font-size: 18px;
-  padding: 5px 10px;
-  border: none;
-  text-align: center;
-  text-transform: uppercase;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: #FFF;
-  -webkit-box-shadow: 0 0 20px #eee;
-          box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  width: 150px;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  cursor: pointer;
-  display: inline-block;
-  border-radius: 25px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#00d2ff), color-stop(51%, #3a7bd5), to(#00d2ff));
-  background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);
-}
-
 .navbar .buttons {
-  margin-left: 15%;
+  position: absolute;
+  right: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20vw;
 }
 
-.navbar .btn-signup {
-  margin: 10px;
+.navbar .buttons .btn-login {
   font-size: 18px;
-  padding: 5px 10px;
-  text-align: center;
+  padding: 4px 20px;
   border: none;
-  text-transform: uppercase;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: #FFF;
-  -webkit-box-shadow: 0 0 20px #eee;
-          box-shadow: 0 0 20px #eee;
   border-radius: 10px;
-  width: 150px;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  cursor: pointer;
-  display: inline-block;
-  border-radius: 25px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#DD5E89), color-stop(51%, #F7BB97), to(#DD5E89));
-  background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%);
+  background: white;
+  border: 1px solid blue;
+  color: blue;
 }
 
-.navbar .btn-darkmode {
-  padding: 5px 10px;
-  border-radius: 10px;
-  background-color: #00d2ff;
+.navbar .buttons .btn-login:hover {
   color: white;
+  background-color: blue;
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.navbar .buttons .btn-signup {
+  font-size: 18px;
+  padding: 4px 20px;
+  border: none;
+  margin-left: 10%;
+  border-radius: 10px;
+  background: white;
+  border: 1px solid orangered;
+  color: orangered;
+}
+
+.navbar .buttons .btn-signup:hover {
+  cursor: pointer;
+  background: orangered;
+  color: white;
+  scale: 1.1;
 }
 /*# sourceMappingURL=navbar.css.map */

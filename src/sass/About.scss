@@ -1,4 +1,191 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
+}
+
+.about-container {
+    // border: 2px solid black;
+    height: 92vh;
+    overflow-y: scroll;
+    animation-name: about-container;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+
+    @keyframes about-contaienr {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .services {
+        // border: 2px solid black;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            color: black;
+            font-size: 50px;
+            border-bottom: 1px solid black;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    }
+
+    .about-video-call {
+        // border: 2px solid blue;
+        // border-bottom: 1px solid black;
+        height: 50vh;
+        display: flex;
+
+        .video-call-text {
+            // border: 2px solid black;
+            width: 50vw;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px 50px;
+
+            h2 {
+                color: black;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 40px;
+            }
+
+            p {
+                margin-top: 2%;
+                font-size: 20px;
+
+                h5 {
+                    display: inline;
+
+                    &::before {
+                        content: "Melon";
+                        color: blue;
+                    }
+
+                    &::after {
+                        content: "Play";
+                        color: black;
+                    }
+                }
+
+                color: black;
+            }
+
+        }
+
+        .video-call-image {
+            // border: 2px solid red;
+            width: 50vw;
+            background: url('../images/video_call.jpg') no-repeat center;
+            background-size: 40vw auto;
+        }
+    }
+
+    .about-chatting {
+        // border: 2px solid black;
+        // border-bottom: 1px solid black;
+        height: 50vh;
+        margin-top: 1%;
+        display: flex;
+
+        .chatting-image {
+            // border: 2px solid blue;
+            width: 50vw;
+            background: url('../images/social_distance_05.jpg') no-repeat center;
+            background-size: 45vw auto;
+        }
+
+        .chatting-text {
+            // border: 2px solid black;
+            width: 40vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            h2 {
+                color: black;
+                font-size: 40px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            p {
+                margin-top: 2%;
+                font-size: 20px;
+                color: black;
+
+                h5 {
+                    display: inline;
+
+                    &::before {
+                        content: "Melon";
+                        color: blue;
+                    }
+
+                    &::after {
+                        content: "Play";
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+    .about-media-stream {
+        // border: 2px solid black;
+        margin-top: 2%;
+        height: 50vh;
+        display: flex;
+
+        .media-stream-text {
+            // border: 2px solid black;
+            width: 50vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            h2 {
+                color: black;
+                font-size: 40px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            p {
+                color: black;
+                font-size: 20px;
+                margin-top: 2%;
+
+                h5 {
+                    display: inline;
+
+                    &::before {
+                        content: "Melon";
+                        color: blue;
+                    }
+
+                    &::after {
+                        content: "Play";
+                        color: black;
+                    }
+                }
+            }
+        }
+
+        .media-stream-image {
+            // border: 2px solid black;
+            width: 50vw;
+            background: url('../images/video_stream.jpg') no-repeat center;
+            background-size: 40vw auto;
+        }
+    }
 }

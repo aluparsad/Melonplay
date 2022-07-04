@@ -169,7 +169,7 @@
 }
 
 .video-call-container .participants-chats-right .chatting-section .chats {
-  height: 35vh;
+  height: 37vh;
   color: black;
   overflow-y: auto;
 }
@@ -198,13 +198,17 @@
 
 .video-call-container .participants-chats-right .chatting-section .input {
   height: 5vh;
-  margin-top: 1%;
+  position: absolute;
+  bottom: 0px;
 }
 
 .video-call-container .participants-chats-right .chatting-section .input input {
   font-size: 18px;
-  width: 360px;
+  width: 350px;
   padding: 3px 4px;
+  border: none;
+  border-bottom: 2px solid blue;
+  margin-left: 20px;
 }
 
 .video-call-container .participants-chats-right .chatting-section .input .submit {

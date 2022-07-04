@@ -15,17 +15,15 @@ export default function Home() {
                     <h2></h2>
                     <h3>Keeping You Connect
                         <br />WhereEver You Are!</h3>
-                    <h4>Connect Your Remote team and Save Time.</h4>
                     <p>Unlimited Access of Video Calling & Screen Sharing.</p>
+                    <p>Stream Media , Movies With Your Friends.</p>
                     <button className="start-call-btn">
                         Start Video Call
                     </button>
                     <div className="bottom">
                         <div className="about">
-                            <p>
-                                <h5></h5>
-                                is an Online Video calling Web Application.You Can Video Call ,Stream Media, & live Chat With Your Friends and Teammates. In <h5></h5> You Can Watch Movie Together and simultaneously you can chat with Friends.
-                            </p>
+                            <h5>Connect Your Remote Team & Save Time</h5>
+                            <p>Talk With You Friends & Colleagues AnyWhere AnyTime.</p>
                         </div>
                         <button className="know-more">
                             Read More
