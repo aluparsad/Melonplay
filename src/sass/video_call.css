@@ -11,7 +11,6 @@
 }
 
 .video-call-container .video-call-left {
-  border-right: 1px solid black;
   width: 65vw;
 }
 
@@ -25,17 +24,75 @@
 }
 
 .video-call-container .video-call-left .video-call .friend {
-  background: black;
   border-radius: 20px;
+  background: whitesmoke;
   width: 20vw;
   height: 20vh;
   margin: 1% 1%;
+  -webkit-box-shadow: 5px 5px 20px 10px grey;
+          box-shadow: 5px 5px 20px 10px grey;
+}
+
+.video-call-container .video-call-left .video-call .friend .frnd-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70px;
+  position: relative;
+  left: 70%;
+  top: 75%;
+}
+
+.video-call-container .video-call-left .video-call .friend .frnd-icons .frnd-mic {
+  color: blue;
+}
+
+.video-call-container .video-call-left .video-call .friend .frnd-icons .frnd-mic:hover {
+  cursor: pointer;
+}
+
+.video-call-container .video-call-left .video-call .friend .frnd-icons .frnd-video {
+  margin-left: 30%;
+  color: black;
+}
+
+.video-call-container .video-call-left .video-call .friend .frnd-icons .frnd-video:hover {
+  cursor: pointer;
 }
 
 .video-call-container .video-call-left .video-call .friend-1 {
-  width: 60vw;
-  height: 55vh;
+  width: 65vw;
+  height: 60vh;
   margin: 1%;
+  -webkit-box-shadow: 5px 5px 20px 10px grey;
+          box-shadow: 5px 5px 20px 10px grey;
+}
+
+.video-call-container .video-call-left .video-call .friend-1 .frnd1-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70px;
+  position: relative;
+  left: 87%;
+  top: 90%;
+}
+
+.video-call-container .video-call-left .video-call .friend-1 .frnd1-icons .frnd-mic {
+  color: blue;
+}
+
+.video-call-container .video-call-left .video-call .friend-1 .frnd1-icons .frnd-mic:hover {
+  cursor: pointer;
+}
+
+.video-call-container .video-call-left .video-call .friend-1 .frnd1-icons .frnd-video {
+  margin-left: 30%;
+  color: black;
+}
+
+.video-call-container .video-call-left .video-call .friend-1 .frnd1-icons .frnd-video:hover {
+  cursor: pointer;
 }
 
 .video-call-container .video-call-left .buttons {
@@ -50,25 +107,79 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-top: 1px solid black;
+  border-radius: 20px;
 }
 
 .video-call-container .video-call-left .buttons .buttons-section-mic {
   color: blue;
   margin: 0px 20px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 10px 5px grey;
+          box-shadow: 10px 10px 5px grey;
 }
 
 .video-call-container .video-call-left .buttons .buttons-section-mic:hover {
   cursor: pointer;
+  scale: 1.1;
 }
 
 .video-call-container .video-call-left .buttons .buttons-section-video {
   color: black;
   margin: 0px 20px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 10px 5px grey;
+          box-shadow: 10px 10px 5px grey;
 }
 
 .video-call-container .video-call-left .buttons .buttons-section-video:hover {
   cursor: pointer;
+  scale: 1.1;
+}
+
+.video-call-container .video-call-left .buttons .buttons-section-screen-share {
+  color: black;
+  margin: 0px 20px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 10px 5px grey;
+          box-shadow: 10px 10px 5px grey;
+}
+
+.video-call-container .video-call-left .buttons .buttons-section-screen-share:hover {
+  cursor: pointer;
+  scale: 1.1;
 }
 
 .video-call-container .video-call-left .buttons .end-meeting {
@@ -78,9 +189,12 @@
   background: red;
   border-radius: 20px;
   margin: 0px 20px;
+  -webkit-box-shadow: 5px 5px 5px grey;
+          box-shadow: 5px 5px 5px grey;
 }
 
 .video-call-container .video-call-left .buttons .end-meeting:hover {
+  scale: 1.1;
   cursor: pointer;
 }
 
@@ -101,21 +215,28 @@
 }
 
 .video-call-container .participants-chats-right .participants-section .participant-heading {
-  border-bottom: 1px solid black;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 10px grey;
+          box-shadow: 2px 2px 10px grey;
   color: black;
   text-align: center;
   font-size: 14px;
+  padding: 5px 0px;
+  background: grey;
+  color: white;
+  text-shadow: 1px 1px 10px whitesmoke;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .video-call-container .participants-chats-right .participants-section .participants {
-  height: 41vh;
+  border-radius: 20px;
+  height: 40vh;
   overflow-y: auto;
   padding: 5px 40px;
 }
 
 .video-call-container .participants-chats-right .participants-section .participants .participant {
   color: black;
-  border: 1px solid black;
   width: 27vw;
   font-size: 20px;
   padding: 5px 0px 5px 20px;
@@ -124,6 +245,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-shadow: 6px 6px 10px 4px grey;
+          box-shadow: 6px 6px 10px 4px grey;
 }
 
 .video-call-container .participants-chats-right .participants-section .participants .participant .participant-icons {
@@ -154,9 +277,7 @@
 }
 
 .video-call-container .participants-chats-right .chatting-section .chat-heading {
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
-  color: black;
+  border-radius: 20px;
   font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,23 +287,37 @@
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 2px 2px 10px whitesmoke;
+  -webkit-box-shadow: 2px 2px 10px 5px grey;
+          box-shadow: 2px 2px 10px 5px grey;
+  background: grey;
+  color: white;
+  padding: 4px 0px;
 }
 
 .video-call-container .participants-chats-right .chatting-section .chats {
+  border-radius: 20px;
   height: 37vh;
   color: black;
   overflow-y: auto;
 }
 
 .video-call-container .participants-chats-right .chatting-section .chats .message {
-  border: 1px solid black;
   margin: 5px 10px;
   padding: 4px 10px;
+  -webkit-box-shadow: 2px 2px 10px 2px grey;
+          box-shadow: 2px 2px 10px 2px grey;
 }
 
 .video-call-container .participants-chats-right .chatting-section .chats .message-left {
   float: left;
   clear: both;
+  color: white;
+  background: blue;
+  -webkit-box-shadow: 2px 2px 20px  blue;
+          box-shadow: 2px 2px 20px  blue;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -191,6 +326,8 @@
 .video-call-container .participants-chats-right .chatting-section .chats .message-right {
   float: right;
   clear: both;
+  background: #ffebeb;
+  color: black;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -204,11 +341,12 @@
 
 .video-call-container .participants-chats-right .chatting-section .input input {
   font-size: 18px;
-  width: 350px;
+  width: 22vw;
   padding: 3px 4px;
   border: none;
-  border-bottom: 2px solid blue;
   margin-left: 20px;
+  border-bottom: 1px solid blue;
+  padding-left: 20px;
 }
 
 .video-call-container .participants-chats-right .chatting-section .input .submit {
