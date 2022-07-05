@@ -1,167 +1,88 @@
 import React from 'react';
 import '../sass/video_call.css';
-import { FaHeart, FaMicrophone, FaVideo, FaComment, FaMicrophoneSlash, FaVideoSlash, FaShareSquare } from 'react-icons/fa';
+import { FaHeart, FaMicrophone, FaVideo, FaComment, FaMicrophoneSlash, FaVideoSlash, FaShareSquare, FaAngleUp } from 'react-icons/fa';
+import Video1 from '../video/sample.mp4'
+import { useState } from 'react';
 
 export default function Video_call() {
+
+    const [Style, setMyStyle] = useState({
+        bottom: '-20px'
+    })
+
+    const toggle = () => {
+        if (Style.bottom == '-20px') {
+            setMyStyle({
+                bottom: '-500px',
+            })
+        }
+        else {
+            setMyStyle({
+                bottom: '-20px'
+            })
+        }
+    }
+
     return (
         <>
             <div className="video-call-container">
-                <div className="video-call-left">
-                    <div className="video-call">
-                        <div className="friend friend-1">
-                            <div className="frnd1-icons">
-                                <div className="frnd-mic">
-                                    <FaMicrophone size={20} />
-                                </div>
-                                <div className="frnd-video">
-                                    <FaVideo size={20} />
-                                </div>
+                <div className="media-stream">
+                    <video src={Video1} controls="True" />
+                    <div className="camera">
+                        <div className="our-camera">
+                        </div>
+                        <div className="controls">
+                            <div className="controls-mic">
+                                <FaMicrophone size={18} />
+                            </div>
+                            <div className="controls-video">
+                                <FaVideo size={18} />
                             </div>
                         </div>
-                        <div className="friend friend-2">
-                            <div className="frnd-icons">
-                                <div className="frnd-mic">
-                                    <FaMicrophone size={20} />
-                                </div>
-                                <div className="frnd-video">
-                                    <FaVideo size={20} />
-                                </div>
-                            </div>
+                        <div className="angle-up" onClick={toggle}>
+                            <FaAngleUp />
                         </div>
-                        <div className="friend friend-3">
-                            <div className="frnd-icons">
-                                <div className="frnd-mic">
-                                    <FaMicrophone size={20} />
-                                </div>
-                                <div className="frnd-video">
-                                    <FaVideo size={20} />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="friend friend-4">
-                            <div className="frnd-icons">
-                                <div className="frnd-mic">
-                                    <FaMicrophone size={20} />
-                                </div>
-                                <div className="frnd-video">
-                                    <FaVideo size={20} />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="buttons">
-                        <div className="buttons-section-mic">
-                            <FaMicrophoneSlash size={28} />
-                        </div>
-                        <div className="buttons-section-video">
-                            <FaVideoSlash size={28} />
-                        </div>
-                        <div className="buttons-section-screen-share">
-                            <FaShareSquare size={28}/>
-                        </div>
-                        <button className="end-meeting">End Meeting</button>
                     </div>
                 </div>
-                <div className="participants-chats-right">
-                    <div className="participants-section">
-                        <div className="participant-heading">
-                            <h2>Participants (4)</h2>
-                        </div>
-                        <div className="participants">
-                            <div className="participant participant-1">
-                                Rohit Sharma
-                                <div className="participant-icons">
-                                    <div className="participant-mic">
-                                        <FaMicrophone size={20} />
-                                    </div>
-                                    <div className="participant-video">
-                                        <FaVideo size={20} />
-                                    </div>
-                                </div>
+                <div className="participants" style={Style} >
+                    <div className="participant participant-1">
+                        <div className="participants-icons">
+                            <div className="mic-icon">
+                                <FaMicrophone />
                             </div>
-                            <div className="participant participant-2">Anand Samadhiya
-                                <div className="participant-icons">
-                                    <div className="participant-mic">
-                                        <FaMicrophone size={20} />
-                                    </div>
-                                    <div className="participant-video">
-                                        <FaVideo size={20} />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="participant participant-3">Dogesh Swami
-                                <div className="participant-icons">
-                                    <div className="participant-mic">
-                                        <FaMicrophone size={20} />
-                                    </div>
-                                    <div className="participant-video">
-                                        <FaVideo size={20} />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="participant participant-4">Kamal Swami
-                                <div className="participant-icons">
-                                    <div className="participant-mic">
-                                        <FaMicrophone size={20} />
-                                    </div>
-                                    <div className="participant-video">
-                                        <FaVideo size={20} />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="participant participant-5">Nikhik Dhoopad
-                                <div className="participant-icons">
-                                    <div className="participant-mic">
-                                        <FaMicrophone size={20} />
-                                    </div>
-                                    <div className="participant-video">
-                                        <FaVideo size={20} />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="participant participant-6">Harsh Sharma
-                                <div className="participant-icons">
-                                    <div className="participant-mic">
-                                        <FaMicrophone size={20} />
-                                    </div>
-                                    <div className="participant-video">
-                                        <FaVideo size={20} />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="participant participant-5">Anshul Paliwal
-                                <div className="participant-icons">
-                                    <div className="participant-mic">
-                                        <FaMicrophone size={20} />
-                                    </div>
-                                    <div className="participant-video">
-                                        <FaVideo size={20} />
-                                    </div>
-                                </div>
+                            <div className="video-icon">
+                                <FaVideo />
                             </div>
                         </div>
                     </div>
-                    <div className="chatting-section">
-                        <div className="chat-heading">
-                            {/* <div className="chat-icon">
-                                <FaComment size={18} />
-                            </div> */}
-                            <h2>Chat</h2>
-                        </div>
-                        <div className="chats">
-                            <div className="message message-right">Rohit : How Are You</div>
-                            <div className="message message-left">Dogesh : I am fine</div>
-                            <div className="message message-left">Dogesh : And You Say?</div>
-                            <div className="message message-right">Rohit : I am Good</div>
-                            <div className="message message-left">Dogesh : What are you Doing now?</div>
-                            <div className="message message-right">Rohit : Nothing! just play playing games.</div>
-                            <div className="message message-right">
-                                Rohit : So , Howz You College Going?
+                    <div className="participant participant-2">
+                        <div className="participants-icons">
+                            <div className="mic-icon">
+                                <FaMicrophone />
+                            </div>
+                            <div className="video-icon">
+                                <FaVideo />
                             </div>
                         </div>
-                        <div className="input">
-                            <input type="text" placeholder='Enter Message Here!' />
-                            <button className="submit">Send</button>
+                    </div>
+                    <div className="participant participant-3">
+                        <div className="participants-icons">
+                            <div className="mic-icon">
+                                <FaMicrophone />
+                            </div>
+                            <div className="video-icon">
+                                <FaVideo />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="participant participant-4">
+                        <div className="participants-icons">
+                            <div className="mic-icon">
+                                <FaMicrophone />
+                            </div>
+                            <div className="video-icon">
+                                <FaVideo />
+                            </div>
                         </div>
                     </div>
                 </div>
