@@ -1,155 +1,63 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  overflow: hidden;
-}
-
-body {
-  background: black;
-}
-
-body::before {
+.login-wrapper {
+  overflow: scroll;
   position: absolute;
-  content: "";
-  background: url("../images/trees-gdf54ce2a8_1280.jpg");
-  background-size: cover;
-  opacity: .5;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  z-index: -1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  background-color: rgba(216, 12, 12, 0.7);
 }
-
-h1 {
-  width: 15%;
-  text-align: center;
-  display: block;
-  margin: auto;
-  margin-top: 7%;
-  font-size: 35px;
+.login-wrapper .login-container {
+  position: absolute;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-
-h1::before {
-  font-family: 'Italianno', cursive;
-  content: "Melon";
-  color: #6a6ada;
-  text-decoration: underline;
-}
-
-h1::after {
-  content: "play";
+.login-wrapper .login-container .text-login {
+  flex: 1;
+  padding: 20px;
+  width: 20vw;
+  text-align: start;
+  font-size: xx-large;
   color: white;
-  text-decoration: underline;
 }
-
-.container {
-  background: white;
-  width: 40%;
-  height: 60vh;
-  display: block;
-  margin: auto;
-  margin-top: 5%;
-  border-radius: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.login-wrapper .login-container .text-login h2 {
+  font-size: calc((1vw + 1vh) * 2.75) !important;
+}
+.login-wrapper .login-container .login {
+  margin: 20px;
+  position: relative;
+  top: 35%;
+  left: 20%;
+  height: 50vh;
+  width: 38vw;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transform: translate(-55%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
-
-.container h2 {
-  margin-bottom: 2%;
-  font-size: 30px;
-  font-family: 'Roboto', sans-serif;
+.login-wrapper .login-container .login .login-input {
+  font-size: calc((1vw + 1vh) * 0.75) !important;
+  width: 25vw;
+  height: 10vh;
 }
-
-.container .login {
-  width: 80%;
-  height: 40vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.login-wrapper .login-container .login .login-loginBtn {
+  font-size: calc((1vw + 1vh) * 0.75) !important;
+  height: 5vh;
+  width: 12vw;
 }
-
-.container .login .input {
-  width: 90%;
-  margin: 10px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.container .login .input input {
-  font-weight: lighter;
-  font-size: 15px;
-  width: 80%;
-  padding: 5px 20px;
-  font-style: italic;
-  border: none;
-  border-bottom: 1px solid black;
-}
-
-.container .login .anchor {
-  margin: 3% 0% 0% 0%;
-  font-size: 18px;
-  width: 90%;
-}
-
-.container .login .anchor #keep-login {
-  margin-left: 7%;
-  margin-right: 2%;
-}
-
-.container .login .anchor #forget-password {
-  margin-left: 15%;
-  color: blue;
-}
-
-.container .login .btn {
-  margin-top: 10%;
-  width: 80%;
-  font-size: 16px;
-  padding: 5px 20px;
-  background: #6a6ada;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bolder;
-}
-
-.container .login .need-an-account {
-  margin-top: 10%;
-  font-size: 18px;
-  font-style: initial;
-}
-/*# sourceMappingURL=login.css.map */
+.login-wrapper .login-container .login .login-registerBtn {
+  font-size: calc((1vw + 1vh) * 0.75) !important;
+  height: 5vh;
+  width: 18vw;
+  padding: 20px !important;
+}/*# sourceMappingURL=login.css.map */

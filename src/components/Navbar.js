@@ -1,27 +1,23 @@
-// import React, { useState } from 'react'
+import React, { useContext } from 'react';
 import '../sass/navbar.css';
+import userContext from './UserContext'
+import { logout } from '../utils/auth';
+
 
 export default function Navbar() {
+    const { user } = useContext(userContext);
 
-    // const [mystyle, setmystyle] = useState({
-    //     color: 'white',
-    //     backgroundColor: 'black'
-    // });
+    const signOutText =
+        <>
+            <a className='username' >hi, {user ? user.displayName : "user"}!</a>
+            <button onClick={logout} className='signout-btn'>signout</button>
+        </>
 
-    // const togglestyle = () => {
-    //     if (mystyle.color == 'white') {
-    //         setmystyle({
-    //             color: 'black',
-    //             backgroundColor: 'white'
-    //         })
-    //     }
-    //     else {
-    //         setmystyle({
-    //             color: 'white',
-    //             backgroundColor: 'black'
-    //         })
-    //     }
-    // }
+    const authOpt = (
+        <>
+            <a href='/login' className='btn btn-login'>login</a>
+            <a href='/register' className='btn btn-signup'>register</a>
+        </>);
 
     return (
         <>
@@ -43,18 +39,9 @@ export default function Navbar() {
                             VideoCall
                         </a>
                     </li>
-                    {/* <li>
-                        <a href="/chatting">
-                            Chatting
-                        </a>
-                    </li> */}
-                    {/* <li>Contact Us</li> */}
                 </ul>
                 <div className="buttons">
-                    <button className="btn btn-login">
-                        Login
-                    </button>
-                    <button className="btn btn-signup">Signup</button>
+                    {user ? signOutText : authOpt}
                 </div>
             </div>
         </>

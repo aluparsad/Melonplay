@@ -1,33 +1,28 @@
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
-// import Login from './components/login';
+import React, { useState } from 'react';
 // import Signup from './components/Signup';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Videocall from './components/Videocall';
-import About from './components/About';
-
-
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+import AppRouter from './components/AppRouter';
+import userContext from './components/UserContext';
+import { authState , updateUserInfo} from './utils/auth';
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  authState((user) => {
+    if(user) {
+      if(! user.displayName) updateUserInfo({displayName:"yogesh"})
+    }
+    setUser(user)
+  })
+
+
   return (
     <>
-      <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/About' element={<About />} />
-          <Route path='/Videocall' element={<Videocall />} />
-          {/* <Route path='/Chatting' element={<Chatting />} /> */}
-          {/* <Route path='/Contactus' element={<Contactus />} /> */}
-        </Routes>
-      </BrowserRouter>
+      <userContext.Provider value={{ user, setUser }}>
+        <Navbar />
+        <AppRouter />
+      </userContext.Provider>
     </>
   );
 }

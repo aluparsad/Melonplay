@@ -13,7 +13,6 @@
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
 }
-
 @-webkit-keyframes about-contaienr {
   from {
     opacity: 0;
@@ -22,7 +21,6 @@
     opacity: 1;
   }
 }
-
 @keyframes about-contaienr {
   from {
     opacity: 0;
@@ -31,195 +29,131 @@
     opacity: 1;
   }
 }
-
 .about-container .services {
   height: 20vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .about-container .services h2 {
   color: black;
   font-size: 50px;
   border-bottom: 1px solid black;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
-
 .about-container .about-video-call {
   height: 50vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .about-container .about-video-call .video-call-text {
   width: 50vw;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   padding: 10px 50px;
 }
-
 .about-container .about-video-call .video-call-text h2 {
   color: black;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 40px;
 }
-
 .about-container .about-video-call .video-call-text p {
   margin-top: 2%;
   font-size: 20px;
   color: black;
 }
-
 .about-container .about-video-call .video-call-text p h5 {
   display: inline;
 }
-
 .about-container .about-video-call .video-call-text p h5::before {
   content: "Melon";
   color: blue;
 }
-
 .about-container .about-video-call .video-call-text p h5::after {
   content: "Play";
   color: black;
 }
-
 .about-container .about-video-call .video-call-image {
   width: 50vw;
   background: url("../images/video_call.jpg") no-repeat center;
   background-size: 40vw auto;
 }
-
 .about-container .about-chatting {
   height: 50vh;
   margin-top: 1%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .about-container .about-chatting .chatting-image {
   width: 50vw;
   background: url("../images/social_distance_05.jpg") no-repeat center;
   background-size: 45vw auto;
 }
-
 .about-container .about-chatting .chatting-text {
   width: 40vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-
 .about-container .about-chatting .chatting-text h2 {
   color: black;
   font-size: 40px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
-
 .about-container .about-chatting .chatting-text p {
   margin-top: 2%;
   font-size: 20px;
   color: black;
 }
-
 .about-container .about-chatting .chatting-text p h5 {
   display: inline;
 }
-
 .about-container .about-chatting .chatting-text p h5::before {
   content: "Melon";
   color: blue;
 }
-
 .about-container .about-chatting .chatting-text p h5::after {
   content: "Play";
   color: black;
 }
-
 .about-container .about-media-stream {
   margin-top: 2%;
   height: 50vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .about-container .about-media-stream .media-stream-text {
   width: 50vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-
 .about-container .about-media-stream .media-stream-text h2 {
   color: black;
   font-size: 40px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
-
 .about-container .about-media-stream .media-stream-text p {
   color: black;
   font-size: 20px;
   margin-top: 2%;
 }
-
 .about-container .about-media-stream .media-stream-text p h5 {
   display: inline;
 }
-
 .about-container .about-media-stream .media-stream-text p h5::before {
   content: "Melon";
   color: blue;
 }
-
 .about-container .about-media-stream .media-stream-text p h5::after {
   content: "Play";
   color: black;
 }
-
 .about-container .about-media-stream .media-stream-image {
   width: 50vw;
   background: url("../images/video_stream.jpg") no-repeat center;
   background-size: 40vw auto;
-}
-/*# sourceMappingURL=About.css.map */
+}/*# sourceMappingURL=About.css.map */

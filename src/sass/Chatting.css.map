@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,GAAG;EACX,OAAO,EAAE,GAAG;CACf",
-    "sources": [
-        "Chatting.scss"
-    ],
-    "names": [],
-    "file": "Chatting.css"
-}
+{"version":3,"sources":["Chatting.scss","Chatting.css"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,YAAA;ACCJ","file":"Chatting.css"}
