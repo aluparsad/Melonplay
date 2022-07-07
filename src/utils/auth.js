@@ -1,5 +1,5 @@
 import { auth } from './firebaseConfig'
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, setPersistence, browserSessionPersistence, signOut, updateProfile } from 'firebase/auth'
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, updateProfile } from 'firebase/auth'
 
 
 const handleAuthCall = (authCall, email, password, onSuccess, onFailure) => {
@@ -26,8 +26,9 @@ const authState = (onChange) => {
     })
 }
 
-const updateUserInfo = (info) => {
+const updateUserInfo = (info, cb) => {
     updateProfile(auth.currentUser, info)
+    .then(()=>cb(auth.currentUser))
 }
 
 export { signInUser , signUpUser, logout, authState, updateUserInfo};

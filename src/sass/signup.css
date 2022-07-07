@@ -1,95 +1,64 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  overflow: hidden;
-}
-
-body {
-  background: black;
-  display: flex;
-  justify-content: center;
-}
-body::before {
+.signup-wrapper {
+  overflow: scroll;
   position: absolute;
-  content: "";
-  background: url("../images/trees-gdf54ce2a8_1280.jpg") no-repeat;
-  background-size: cover;
   width: 100vw;
   height: 100vh;
-  opacity: 0.5;
-  filter: blur(1px);
-  z-index: -1;
-}
-
-h2 {
-  width: 25%;
-  text-align: center;
-  display: block;
-  margin: auto;
-  margin-top: 8%;
-  font-size: 35px;
-}
-h2::before {
-  font-family: "Italianno", cursive;
-  content: "Melon";
-  color: rgb(106, 106, 218);
-  text-decoration: underline;
-}
-h2::after {
-  content: "play";
-  color: white;
-  text-decoration: underline;
-}
-
-.container {
-  background: white;
-  width: 60vw;
-  height: 60vh;
-  display: block;
-  margin: auto;
-  margin-top: 8%;
-  border-radius: 12px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 0;
+  background-color: rgba(216, 12, 12, 0.7);
 }
-.container h3 {
-  font-size: 35px;
+.signup-wrapper .signup-container {
+  position: absolute;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-.container #input-tags {
-  width: 90%;
-  height: 60%;
+.signup-wrapper .signup-container .text-signup {
+  flex: 1;
+  padding: 20px;
+  width: 20vw;
+  text-align: start;
+  font-size: xx-large;
+  color: white;
+}
+.signup-wrapper .signup-container .text-signup h2 {
+  font-size: calc((1vw + 1vh) * 2.75) !important;
+}
+.signup-wrapper .signup-container .signup {
+  padding: 20px;
+  margin: 20px;
+  position: relative;
+  top: 35%;
+  left: 20%;
+  height: 50vh;
+  width: 38vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
+  transform: translate(-55%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
-.container #input-tags .input {
-  width: 40%;
-  font-size: 18px;
-  margin: 3% 2%;
+.signup-wrapper .signup-container .signup .signup-input {
+  font-size: calc((1vw + 1vh) * 0.75) !important;
+  width: 25vw;
+  height: 10vh;
 }
-.container #input-tags .input label {
-  font-size: 18px;
+.signup-wrapper .signup-container .signup .signup-signupBtn {
+  font-size: calc((1vw + 1vh) * 0.75) !important;
+  height: 5vh;
+  width: 12vw;
 }
-.container #input-tags .input input {
-  border: none;
-  border-bottom: 2px solid blue;
-  margin-top: 2%;
-  margin-left: 2%;
-  font-size: 15px;
-  padding: 6px 6px;
-  width: 90%;
-}
-.container .btn {
-  width: 40%;
-  font-size: 18px;
-  padding: 5px 20px;
-  background: rgb(106, 106, 218);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+.signup-wrapper .signup-container .signup .signup-registerBtn {
+  font-size: calc((1vw + 1vh) * 0.75) !important;
+  height: 5vh;
+  width: 18vw;
+  padding: 20px !important;
 }/*# sourceMappingURL=signup.css.map */

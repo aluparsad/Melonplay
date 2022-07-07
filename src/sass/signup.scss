@@ -1,109 +1,78 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
+$btn-text-size: 1.5;
+
+@mixin setFontSize($size) {
+    font-size: calc((1vw + 1vh) * ($size / 2)) !important;
 }
 
-body {
-    background: black;
-
-    &::before {
-        position: absolute;
-        content: "";
-        background: url('../images/trees-gdf54ce2a8_1280.jpg') no-repeat;
-        background-size: cover;
-        width: 100vw;
-        height: 100vh;
-        opacity: .5;
-        filter: blur(1px);
-        z-index: -1;
-    }
-
+.signup-wrapper {
+    overflow: scroll;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    justify-content: center;
-}
-
-h2 {
-
-    width: 25%;
-    text-align: center;
-    display: block;
-    margin: auto;
-    margin-top: 8%;
-    font-size: 35px;
-
-    &::before {
-        font-family: 'Italianno', cursive;
-        content: "Melon";
-        color: rgb(106, 106, 218);
-        text-decoration: underline;
-    }
-
-    &::after {
-        content: "play";
-        color: white;
-        text-decoration: underline;
-    }
-}
-
-.container {
-    background: white;
-    width: 60vw;
-    height: 60vh;
-    display: block;
-    margin: auto;
-    margin-top: 8%;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 0;
+    background-color: rgba(216, 12, 12, 0.7);
 
-    h3 {
-        font-size: 35px;
-    }
-
-    #input-tags {
-        // border: 2px dotted black;
-        width: 90%;
-        height: 60%;
+    .signup-container {
+        position: absolute;
+        width: 100vw;
+        height: 70vh;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap;
 
-        .input {
-            // border: 2px solid black;
-            width: 40%;
-            font-size: 18px;
-            margin: 3% 2%;
-
-            label {
-                font-size: 18px;
-                // color: blue;
-            }
-
-            input {
-                border: none;
-                border-bottom: 2px solid blue;
-                margin-top: 2%;
-                margin-left: 2%;
-                font-size: 15px;
-                padding: 6px 6px;
-                width: 90%;
+        .text-signup {
+            flex: 1;
+            padding: 20px;
+            width: 20vw;
+            text-align: start;
+            font-size: xx-large;
+            color: white;
+            h2{
+                @include setFontSize($btn-text-size+4);
             }
         }
-    }
 
-    .btn {
-        width: 40%;
-        font-size: 18px;
-        padding: 5px 20px;
-        background: rgb(106, 106, 218);
-        color: white;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
+        .signup {
+            padding: 20px;
+            margin: 20px;
+            position: relative;
+            top: 35%;
+            left: 20%;
+            height: 50vh;
+            width: 38vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            transform: translate(-55%, -50%);
+            background-color: rgba(#ffffff, 0.9);
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+
+            .signup-input {
+                @include setFontSize($btn-text-size);
+                width: 25vw;
+                height: 10vh;
+            }
+
+            .signup-signupBtn {
+                @include setFontSize($btn-text-size);
+                height: 5vh;
+                width: 12vw;
+            }
+
+            .signup-registerBtn {
+                @include setFontSize($btn-text-size);
+                height: 5vh;
+                width: 18vw;
+                padding: 20px !important;
+            }
+
+        }
     }
 }
