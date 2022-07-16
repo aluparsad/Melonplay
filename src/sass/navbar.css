@@ -45,6 +45,7 @@ a {
   margin: 5px 10px;
 }
 .navbar ul li a {
+  font-size: calc((1vw + 1vh) * 0.85) !important;
   color: black;
 }
 .navbar ul li:hover {

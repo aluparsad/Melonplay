@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../sass/Home.css';
+import userContext from './UserContext';
 
 export default function Home() {
     return (
