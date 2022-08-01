@@ -1,0 +1,34 @@
+.participant {
+  z-index: 1;
+  flex: none;
+  background: white;
+  width: 20vw;
+  height: 20vh;
+  border-radius: 10px;
+  margin: 1vh 1vw;
+}
+.participant .participant-video {
+  width: 100%;
+  height: 100%;
+}
+.participant .participants-icons {
+  position: relative;
+  width: 20vw;
+  height: 10vh;
+  z-index: 10;
+  top: -22%;
+  left: 75%;
+  background-color: white;
+  color: black;
+  display: flex;
+}
+.participant .participants-icons .mic-icon {
+  margin-right: 5%;
+  color: blue;
+}
+.participant .participants-icons .mic-icon:hover {
+  cursor: pointer;
+}
+.participant .participants-icons .video-icon:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=userCall.css.map */

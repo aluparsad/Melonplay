@@ -58,8 +58,11 @@ a{
 
             a {
                 @include setFontSize($nav-text-size - 0.3);
-
                 color: black;
+                
+                &:hover{
+                    font-weight: 600;
+                }
             }
 
             &:hover {

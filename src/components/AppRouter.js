@@ -1,15 +1,14 @@
 import React from 'react';
 import Home from './Home';
-import Videocall from './Videocall';
 import About from './About';
 import Login from './login';
 import Signup from './Signup';
+import VideoCall from './VideoCall/Videocall'
 
 import {
     BrowserRouter as Router,
     Routes,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
 
 const AppRouter = () => {
@@ -17,14 +16,12 @@ const AppRouter = () => {
         <>
             <Router>
                     <Routes>
-                        <Route path='/' element={<Home />} />
-                        <Route path='About' element={<About />} />
-                        <Route path='Videocall' element={<Videocall />} />
-                        <Route path='login' element={<Login />} />
-                        <Route path='register' element={<Signup />} />
-                        <Route path='*' element={<Home />} />
-                        {/* <Route path='/Chatting' element={<Chatting />} /> */}
-                        {/* <Route path='/Contactus' element={<Contactus />} /> */}
+                        <Route path='/' exact element={<Home />} />
+                        <Route path='about' exact element={<About />} />
+                        <Route path='videocall/:id' exact element={<VideoCall />} />
+                        <Route path='login' exact element={<Login />} />
+                        <Route path='register' exact element={<Signup />} />
+                        <Route path="*" exact element={<Home />} />
                     </Routes>
             </Router>
         </>

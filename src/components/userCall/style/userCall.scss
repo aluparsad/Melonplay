@@ -1,0 +1,41 @@
+.participant {
+    z-index: 1;
+    flex: none;
+    background: white;
+    width: 20vw;
+    height: 20vh;
+    border-radius: 10px;
+    margin: 1vh 1vw;
+
+    .participant-video{
+        width: 100%;
+        height: 100%;
+    }
+
+    .participants-icons {
+        position: relative;
+        width: 20vw;
+        height: 10vh;
+        z-index: 10;
+        top: -22%;
+        left: 75%;
+        background-color: white;
+        color: black;
+        display: flex;
+
+        .mic-icon {
+            margin-right: 5%;
+            color: blue;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .video-icon {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

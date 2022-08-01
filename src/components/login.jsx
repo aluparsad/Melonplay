@@ -1,30 +1,16 @@
 import React, { useState , useContext, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
-import { red, green } from '@material-ui/core/colors'
 import { TextField, Button } from '@material-ui/core';
-import { createTheme, ThemeProvider } from '@material-ui/core/styles'
 import { signInUser } from '../utils/auth'
 import userContext from './UserContext';
 import '../sass/login.css';
 
-
-const theme = createTheme({
-    palette: {
-        primary: {
-            main: green[800],
-        },
-        secondary: {
-            main: red[300]
-        },
-    }
-})
 
 const Login = () => {
     const {setUser , setNavVisible} = useContext(userContext);
     
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
 
     useEffect(() => {
         setNavVisible(false);
@@ -37,7 +23,7 @@ const Login = () => {
     
     const login = () => {
         signInUser(email, password, (creds) => {
-            setUser(creds.user)
+            setUser(()=>creds.user)
             navigate("/");
         }, (err) => {
             alert(err.message)
@@ -46,7 +32,6 @@ const Login = () => {
     }
 
     return (
-        <ThemeProvider theme={theme}>
             <div className="login-wrapper">
                 <div className="login-container">
                     <div className="text-login">
@@ -60,7 +45,6 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-        </ThemeProvider>
     )
 }
 export default Login;

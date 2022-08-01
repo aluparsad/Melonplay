@@ -3,8 +3,7 @@ import '../sass/navbar.css';
 import userContext from './UserContext'
 import { logout } from '../utils/auth';
 
-
-export default function Navbar() {
+const Navbar = () => {
     const { user } = useContext(userContext);
 
     const signOutText =
@@ -34,11 +33,11 @@ export default function Navbar() {
                             Services
                         </a>
                     </li>
-                    <li>
+                    {/* <li>
                         <a href="/Videocall">
                             VideoCall
                         </a>
-                    </li>
+                    </li> */}
                 </ul>
                 <div className="buttons">
                     {user ? signOutText : authOpt}
@@ -47,3 +46,6 @@ export default function Navbar() {
         </>
     )
 }
+
+
+export default Navbar;

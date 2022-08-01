@@ -48,6 +48,9 @@ a {
   font-size: calc((1vw + 1vh) * 0.85) !important;
   color: black;
 }
+.navbar ul li a:hover {
+  font-weight: 600;
+}
 .navbar ul li:hover {
   cursor: pointer;
   color: rgb(111, 111, 174);

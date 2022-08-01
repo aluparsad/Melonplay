@@ -78,13 +78,12 @@
             width: 200px;
             margin-top: 5%;
             margin-left: 15%;
-            background: blue;
-            color: white;
-            font-size: 18px;
             padding: 5px 20px;
             border: none;
+            font-weight: 500;
             border-radius: 20px;
             &:hover{
+                font-weight: 800;
                 cursor: pointer;
             }
         }
@@ -115,15 +114,13 @@
 
             .know-more {
                 margin-top: 5%;
-                font-size: 18px;
                 padding: 5px 20px;
-                background: orangered;
-                color: whitesmoke;
                 border-radius: 20px;
                 margin-left: 50px;
                 border-width: 1px;
                 &:hover{
                     cursor: pointer;
+                    font-weight: 800;
                 }
             }
         }

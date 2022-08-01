@@ -68,14 +68,13 @@
   width: 200px;
   margin-top: 5%;
   margin-left: 15%;
-  background: blue;
-  color: white;
-  font-size: 18px;
   padding: 5px 20px;
   border: none;
+  font-weight: 500;
   border-radius: 20px;
 }
 .container .right .start-call-btn:hover {
+  font-weight: 800;
   cursor: pointer;
 }
 .container .right .bottom {
@@ -101,16 +100,14 @@
 }
 .container .right .bottom .know-more {
   margin-top: 5%;
-  font-size: 18px;
   padding: 5px 20px;
-  background: orangered;
-  color: whitesmoke;
   border-radius: 20px;
   margin-left: 50px;
   border-width: 1px;
 }
 .container .right .bottom .know-more:hover {
   cursor: pointer;
+  font-weight: 800;
 }
 @-webkit-keyframes right {
   from {
