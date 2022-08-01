@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import AppRouter from './components/AppRouter';
 import userContext from './components/UserContext';
 import { authState } from './utils/auth';
-import { ThemeProvider } from '@material-ui/core/styles'
+import {ThemeProvider} from '@mui/material'
 import theme from "./utils/Theme"
 
 

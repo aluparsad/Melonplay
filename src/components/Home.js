@@ -1,6 +1,6 @@
 import React from 'react';
 import '../sass/Home.css';
-import { Button } from '@material-ui/core';
+import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import {v4 as uuidV4} from 'uuid'
 

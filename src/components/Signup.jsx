@@ -1,5 +1,5 @@
 import { signUpUser, updateUserInfo } from '../utils/auth'
-import { TextField, Button } from '@material-ui/core';
+import { TextField, Button } from '@mui/material';
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import userContext from './UserContext';
