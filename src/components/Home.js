@@ -27,7 +27,7 @@ export default function Home() {
                         <div className="image"></div>
                     </div>
                     <div className="right">
-                        <h2></h2>
+                        {/* <h2></h2> */}
                         <h3>Keeping You Connect
                             <br />WhereEver You Are!</h3>
                         <p>Unlimited Access of Video Calling & Screen Sharing.</p>

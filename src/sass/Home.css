@@ -24,6 +24,7 @@
 }
 .container .right {
   width: 40vw;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   -webkit-animation-name: right;
