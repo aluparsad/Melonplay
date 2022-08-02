@@ -4,6 +4,8 @@ import About from './About';
 import Login from './login';
 import Signup from './Signup';
 import VideoCall from './VideoCall/Videocall'
+import JoinCall from './VideoCall/JoinCall/JoinCall';
+import AskRoomIdDialog from './AskRoomIdDialog';
 
 import {
     BrowserRouter as Router,
@@ -19,8 +21,10 @@ const AppRouter = () => {
                         <Route path='/' exact element={<Home />} />
                         <Route path='about' exact element={<About />} />
                         <Route path='videocall/:id' exact element={<VideoCall />} />
+                        <Route path="join/:id" exact element={<JoinCall />} />
                         <Route path='login' exact element={<Login />} />
                         <Route path='register' exact element={<Signup />} />
+                        <Route path='test' exact element={<AskRoomIdDialog />} />
                         <Route path="*" exact element={<Home />} />
                     </Routes>
             </Router>

@@ -5,12 +5,15 @@
 }
 
 .container {
+  margin-top: 2vh;
   height: 93vh;
   width: 100vw;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container .left {
-  width: 60vw;
+  flex: 1.8;
   display: flex;
   flex-direction: column;
 }
@@ -19,14 +22,17 @@
 }
 .container .left .image {
   height: 90vh;
+  -o-object-fit: cover;
+     object-fit: cover;
   background: url("../images/bg1.jpg") no-repeat center;
   background-size: 850px auto;
 }
 .container .right {
-  width: 40vw;
-  justify-content: center;
+  flex: 1.4;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-inline: 1vw;
   -webkit-animation-name: right;
           animation-name: right;
   -webkit-animation-duration: 1s;
@@ -34,27 +40,10 @@
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
-.container .right h2 {
-  text-align: center;
-  margin-top: 5%;
-  padding: 5px 10px;
-}
-.container .right h2::before {
-  content: "Melon";
-  color: blue;
-  font-size: 40px;
-  font-family: "Italianno", cursive;
-}
-.container .right h2::after {
-  content: "Play";
-  color: black;
-  font-size: 40px;
-  font-family: "Roboto", sans-serif;
-}
 .container .right h3 {
+  font-size: calc((1vh + 1vw) * 2.25);
   color: black;
   text-align: left;
-  font-size: 40px;
   margin-top: 5%;
 }
 .container .right h4 {
@@ -62,6 +51,7 @@
   margin-top: 3%;
 }
 .container .right p {
+  font-size: calc((1vh + 1vw) * 0.9);
   color: black;
   margin-top: 2%;
 }
@@ -83,20 +73,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 32vh;
+  height: 40vh;
 }
 .container .right .bottom .about {
   margin-top: 1%;
-  width: 450px;
-  margin-left: 50px;
   text-align: left;
+  margin-left: 5vw;
+  margin-right: 1vw;
+  width: 35vw;
 }
 .container .right .bottom .about h5 {
+  font-size: calc((1vh + 1vw) * 2.25);
   display: inline;
-  font-size: 40px;
   color: black;
 }
 .container .right .bottom .about p {
+  font-size: calc((1vh + 1vw) * 0.9);
   color: black;
 }
 .container .right .bottom .know-more {

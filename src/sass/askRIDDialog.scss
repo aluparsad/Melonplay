@@ -1,0 +1,59 @@
+.dialog-wrapper{
+    z-index: 100;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: black, $alpha: 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin containerDims($w, $h) {
+    width: calc($w * 1vw);
+    height: calc($h * 1vh);
+    border-radius: 1rem;
+    z-index: 10;
+    box-shadow: black 1vw, 1vh;
+}
+.dialog-container{
+    @include containerDims(35,35);
+    display: flex;
+    background-color: white;
+    box-shadow: 1px 1px 20px 1px rgba($color: #000000, $alpha: 0.6);
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .title-dialog{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-inline: 5vw;
+        align-items: center;
+
+        h3{
+            color: rgba($color: rgb(22, 40, 30), $alpha: 0.85);
+            font-size: calc( (1vh + 1vw) * (3 / 2) );
+        }
+        
+        #dialog-close-btn{
+            position: relative;
+            left: 6vw;
+            top: -1vh;
+            width: calc((1vh + 1vw ) * (1.5/2));
+        }
+    
+    }
+    
+    input{
+        width: 20vw;
+        height: 3vh;
+        font-size: calc((1vh + 1vw) * (1.7/2));
+    }
+    button{
+        width: 10vw;
+        height: 5vh;
+        font-size: calc((1vh + 1vw) * (1.6/2));
+        font-weight: 600;
+    }
+}
