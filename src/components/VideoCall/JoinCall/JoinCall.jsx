@@ -30,7 +30,7 @@ const JoinCall = () => {
     
     // Connection
     const socket = io(socketAddress);
-    const peer = new Peer(user.uid, peerOpt);
+    const peer = new Peer(user.uid);
     
     const [users, setUsers] = useState([])
     const [mainStream, setMainStream] = useState(null);

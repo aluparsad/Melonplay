@@ -34,8 +34,8 @@ const VideoCall = () => {
     const socket = io(socketAddress)
 
     // peers user and main media
-    const peerMain = new Peer(roomId, peerOpt);
-    const selfPeer = new Peer(user.uid, peerOpt);
+    const peerMain = new Peer(roomId);
+    const selfPeer = new Peer(user.uid);
 
 
     // const [users] = useState([1,2,4,5,4]);
