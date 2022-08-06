@@ -22,10 +22,11 @@
 }
 .container .left .image {
   height: 90vh;
+  width: 70vw;
   -o-object-fit: cover;
      object-fit: cover;
   background: url("../images/bg1.jpg") no-repeat center;
-  background-size: 850px auto;
+  background-size: 70vw auto;
 }
 .container .right {
   flex: 1.4;

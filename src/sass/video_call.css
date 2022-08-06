@@ -1,14 +1,26 @@
 .video-container {
+  background-color: black;
+  position: relative;
   height: 100vh;
   overflow: scroll;
-  background-color: black;
+  transition: 5s;
 }
 .video-container .media-stream {
+  background-color: black;
   height: 100vh;
   width: 100vw;
+  z-index: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: scroll;
+}
+.video-container .media-stream #main-media-stream {
+  position: fixed;
+  height: 95vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: 1;
 }
 .video-container .media-stream video {
   position: fixed;
@@ -16,15 +28,15 @@
   height: 100vh;
 }
 .video-container .media-stream a {
-  position: absolute;
+  z-index: 100;
+  position: fixed;
   left: 1vw;
   top: 2vh;
-  color: rgba(149, 92, 92, 0.5);
+  color: rgba(255, 255, 255, 0.5);
   transition: 0.2s;
-  z-index: 1;
 }
 .video-container .media-stream a:hover {
-  color: rgb(149, 92, 92);
+  color: rgb(255, 255, 255);
 }
 .video-container .media-stream .self-camera {
   position: absolute;
@@ -44,6 +56,7 @@
   justify-content: center;
 }
 .video-container .media-stream .self-camera .camera video {
+  z-index: 1;
   width: calc((1vh + 1vw) * 3);
   height: calc((1vh + 1vw) * 3);
   -o-object-fit: cover;
@@ -59,7 +72,7 @@
   align-items: center;
 }
 .video-container .participants {
-  height: 30vh;
+  height: 22vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -72,6 +85,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 
 ::-webkit-scrollbar {

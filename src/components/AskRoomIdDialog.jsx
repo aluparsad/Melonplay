@@ -20,7 +20,7 @@ const AskRoomIdDialog = ({ jr, close }) => {
                         <h3>Enter Room Id</h3>
                         <Cross color='orange' id='dialog-close-btn' onClick={close} />
                     </div>
-                    <TextField onChange={e => { setFocused(true); setRoomId(e.target.value) }} color='primary' type="text" id="roomIdInput" label="Room Id" variant="standard" required error={(roomId.length < 10) & (focused)} />
+                    <TextField onChange={e => { setFocused(true); setRoomId(e.target.value) }} color='primary' type="text" id="roomIdInput" label="Room Id" variant="standard" required error={((roomId.length < 10) && (focused))} />
                     <Button onClick={onClickJoinBtn} variant='contained' className="contained-btn-join">Join</Button>
                 </div>
             </div>

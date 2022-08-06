@@ -3,23 +3,12 @@ import userContext from '../../UserContext';
 import UserCall from '../../userCall/UserCall';
 import { FaReply } from 'react-icons/fa';
 import { useNavigate, useParams } from 'react-router-dom';
-// import io from 'socket.io-client';
-// import { Peer } from 'peerjs'
-import { onStart, onPageChanged } from './presenter';
+import io from 'socket.io-client';
+import { Peer } from 'peerjs'
 import '../../../sass/video_call.css';
+import { socketAddress, peerOpt } from '../../../utils/Constants';
 
 
-
-const users = [1, 2, 4];
-
-
-const askMediaStream = async () => {
-    const stream = await navigator.mediaDevices.getDisplayMedia({
-        video: true,
-        audio: true
-    })
-    return stream;
-}
 
 const requestCamStream = async () => {
     const stream = await navigator.mediaDevices.getUserMedia({
@@ -31,28 +20,65 @@ const requestCamStream = async () => {
 
 
 const JoinCall = () => {
-
     const { user, setNavVisible } = useContext(userContext);
-
+    
+    const navi = useNavigate();
+    const roomId = useParams().id;
+    
+    const mainVideoRef = useRef();
+    const selfCamVideoRef = useRef();
+    
+    // Connection
+    const socket = io(socketAddress);
+    const peer = new Peer(user.uid, peerOpt);
+    
+    const [users, setUsers] = useState([])
     const [mainStream, setMainStream] = useState(null);
     const [selfStream, setSelfStream] = useState(null);
 
-    const [socket, setSocket] = useState(null);
-    const [peer, setPeer] = useState(null);
+    const callMainPeer = async () => {
+        const str = await requestCamStream();
+        const call = peer.call(roomId, str);
+        console.log('mainCall', call)
 
-    const navi = useNavigate();
-    const params = useParams();
+        call.on('stream', stream=>{
+            console.log('main str', stream);
+            setMainStream(()=>stream);
+            mainVideoRef.current.srcObject = stream;
+        })
+    }
 
-    const mainRef = createRef();
-    const selfCam = createRef();
 
-    // Test
-    useEffect(() => {
-        const roomId = params.id;
-        onStart(roomId, user.uid, mainStream, selfStream)
-        return () => onPageChanged()
-    }, [])
+    const makeCall = (peerId) => {
+        const call = peer.call(peerId, selfStream);
+        console.log('call2', call);
+        call.on('stream', stream=>{
+            const view = <UserCall stream/>
+            users.push(view)
+        })
+    }
 
+    peer.on('call', async(call) => {
+        const str  = await requestCamStream();
+        call.answer(str.clone());
+        
+        console.log('call1', call)
+
+        call.on('stream', stream=>{
+            const view = <UserCall stream/>
+            users.push(view)
+        })
+    })
+
+
+    peer.on('open',(id)=>{
+        socket.emit("join-room", roomId, id)
+        callMainPeer();
+    })
+
+    socket.on('newUser', pid => {
+        makeCall(pid)
+    })
 
     useEffect(() => {
         if (!user || !user.uid) return () => {
@@ -63,43 +89,18 @@ const JoinCall = () => {
         return () => setNavVisible(true);
     }, [user])
 
-
     useEffect(() => {
-        const temp = async () => {
-
-            if (!mainStream) {
-                const tabStream = await askMediaStream();
-                await setMainStream(() => tabStream)
-            }
-
+        const setStreams = async () => {
             if (!selfStream) {
-                const webStream = await requestCamStream();
-                await setSelfStream(() => webStream)
+                const str = await requestCamStream();
+                setSelfStream(str)
+                selfCamVideoRef.current.srcObject = str;
             }
         }
-        temp()
+        setStreams()
     }, [mainStream, selfStream])
 
-    useEffect(() => {
-
-        if (mainRef.current && mainStream) {
-            mainRef.current.srcObject = mainStream;
-        }
-
-        if (selfCam.current && selfStream) {
-            selfCam.current.srcObject = selfStream;
-        }
-
-    }, [mainRef, selfCam])
-
-
-    // useEffect(() => {
-    //     setPeer(() => new Peer(user.uid));
-    //     setSocket(() => handleSocketConnection(params.id, user.uid))
-
-    // }, [])
-
-
+    
 
     const [Style, setMyStyle] = useState({
         bottom: '-20px'
@@ -117,6 +118,7 @@ const JoinCall = () => {
             })
         }
     }
+    const k = 0;
     return (
         <>
             <div className="video-container">
@@ -125,13 +127,13 @@ const JoinCall = () => {
                         <FaReply />
                     </a>
 
-                    <video ref={mainRef} autoPlay playsInline />
+                    <video ref={mainVideoRef} autoPlay playsInline />
 
 
                     <div className="self-camera">
 
                         <div className="camera" onClick={toggle}>
-                            <video ref={selfCam} muted onClick={() => { }} autoPlay playsInline />
+                            <video ref={selfCamVideoRef} muted onClick={() => { }} autoPlay playsInline />
                         </div>
 
                     </div>
@@ -139,7 +141,7 @@ const JoinCall = () => {
 
                 <div className="participants" style={Style} >
                     <div className="participants-container">
-                        {users.map(u => <UserCall key={u} />)}
+                        {/* {users.map(u => <UserCall key={k++} />)} */}
                     </div>
                 </div>
             </div>

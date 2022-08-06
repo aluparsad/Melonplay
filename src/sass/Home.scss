@@ -8,6 +8,7 @@
     font-size: calc((1vh + 1vw) * ($val/2)) ;
 }
 
+
 .container {
     // border: 2px solid black;
     margin-top: 2vh;
@@ -30,9 +31,10 @@
 
         .image {
             height: 90vh;
+            width: 70vw;
             object-fit: cover;
             background: url('../images/bg1.jpg') no-repeat center;
-            background-size: 850px auto;
+            background-size: 70vw auto;
         }
     }
 

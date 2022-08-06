@@ -41,7 +41,6 @@ export default function Home() {
                 <div className="container">
                     <div className="left">
                         <div className="image">
-                            
                         </div>
                     </div>
                     <div className="right">

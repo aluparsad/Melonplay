@@ -2,40 +2,55 @@
     width: calc((1vh + 1vw) * ($const/2));
     height: calc((1vh + 1vw) * ($const/2));
 }
+
 @mixin lrSet($calc) {
     top: calc((1vh + 1vw) * (($calc + 2) / 2));
     right: calc((1vh + 1vw) * ($calc / 2));
 }
 
 .video-container {
+    background-color: black;
+    position: relative;
     height: 100vh;
     overflow: scroll;
-    background-color: black;
+    transition: 5s;
 
     .media-stream {
+        background-color: black;
         height: 100vh;
         width: 100vw;
+        z-index: 0;
         display: flex;
         align-items: center;
-        justify-content: center;    
+        justify-content: center;
+        overflow: scroll;
+
+        #main-media-stream{
+            position: fixed;
+            height: 95vh;
+            object-fit: contain;
+            z-index: 1;
+        }
 
         video {
             position: fixed;
             width: 100vw;
             height: 100vh;
         }
-            a{
-                position: absolute;
-                left: 1vw;
-                top: 2vh;
-                color: rgba(149,92,92, 0.5);
-                transition: 0.2s ;
-                z-index: 1;
 
-                &:hover{
-                    color: rgba(149, 92, 92,1);
-                }
+        a {
+            z-index: 100;
+            position: fixed;
+            left: 1vw;
+            top: 2vh;
+            color: rgba(255, 255, 255, 0.5);
+            transition: 0.2s;
+
+            &:hover {
+                color: rgba(255, 255, 255, 1);
             }
+        }
+
         // }
 
         .self-camera {
@@ -56,7 +71,8 @@
                 align-items: center;
                 justify-content: center;
 
-                video{
+                video {
+                    z-index: 1;
                     @include avgDim(6);
                     object-fit: cover;
                     border-radius: 50%;
@@ -77,24 +93,24 @@
     }
 
     .participants {
-        height: 30vh;
+        height: 22vh;
         width: 100vw;
 
         display: flex;
         align-items: center;
         justify-content: center;
         overflow-x: scroll;
-        
 
-        .participants-container{
+        .participants-container {
             width: auto;
             height: 22vh;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            z-index: 1;
         }
     }
-    
+
 
 }
 
