@@ -1,13 +1,11 @@
-import React, { useContext, useEffect, useState, createRef, useRef } from 'react';
-import { FaMicrophone, FaVideo, FaReply } from 'react-icons/fa';
+import React, { useContext, useEffect, useState, useRef } from 'react';
+import { FaReply } from 'react-icons/fa';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Peer } from 'peerjs'
-import { FaVolumeMute } from 'react-icons/fa';
 import io from 'socket.io-client';
 import userContext from '../UserContext';
 import UserCall from '../userCall/UserCall';
-import { onStart, onPageChanged } from './presenter';
-import { peerOpt, socketAddress } from '../../utils/Constants';
+import { socketAddress } from '../../utils/Constants';
 import '../../sass/video_call.css'
 
 
@@ -20,16 +18,17 @@ const streamOpt = {
 const VideoCall = () => {
     const { user, setNavVisible } = useContext(userContext);
 
-    // const [mainStream, setMainStream] = useState(null);
-    // const [selfStream, setSelfStream] = useState(null);
+    const [Style, setMyStyle] = useState({
+        bottom: '-20px'
+    })
 
     const navi = useNavigate();
     const roomId = useParams().id;
 
     const mainVideoRef = useRef();
     const selfCamVideoRef = useRef();
-    
 
+   
     // Connection
     const socket = io(socketAddress)
 
@@ -37,14 +36,23 @@ const VideoCall = () => {
     const peerMain = new Peer(roomId);
     const selfPeer = new Peer(user.uid);
 
-
     // const [users] = useState([1,2,4,5,4]);
     const [users, setUsers] = useState(new Set());
 
-    const addUser = (usr) => {
-        setUsers(users => new Set([...users, usr]))
+    const addCall = (call) => {
+        setUsers(users => new Set([...users, call]))
     }
 
+    const removeUser = (usr) => {
+        setUsers(users => {
+            const temp = users;
+            temp.delete(usr);
+            return new Set([...temp]);
+        })
+    }
+
+
+    // Media Streams
     useEffect(() => {
         navigator
             .mediaDevices
@@ -59,22 +67,20 @@ const VideoCall = () => {
             .then(str => { mainVideoRef.current.srcObject = str })
     }, [])
 
+    // Peer On Call
     peerMain.on('call', async (call) => {
         const str = mainVideoRef.current.srcObject;
-        call.answer(str);
+        call.answer(str.clone());
     })
 
     // make call to peer -> pid
     const makeCall = async (pid) => {
-        const str = selfCamVideoRef.current.srcObject;
+        const str = await navigator.mediaDevices.getUserMedia(streamOpt);
         const call = selfPeer.call(pid, str);
-
+        
         if (!call) return;
-
-        call.on('stream', stream => {
-            addUser(stream);
-            // users.push(stream.clone())
-        })
+        
+        addCall(call);
     }
 
     // emit peer id and call on new user
@@ -84,13 +90,9 @@ const VideoCall = () => {
     })
 
     socket.on('newUser', pid => {
-        console.log('new user connected', pid);
+        // console.log('new user connected', pid);
         makeCall(pid);
     })
-
-    useEffect(() => {
-        console.log('new video elem', users)
-    }, [users])
 
     useEffect(() => {
         if (!user || !user.uid) return () => {
@@ -101,9 +103,7 @@ const VideoCall = () => {
         return () => setNavVisible(true);
     }, [user])
 
-    const [Style, setMyStyle] = useState({
-        bottom: '-20px'
-    })
+
 
     const toggle = () => {
         if (Style.bottom === '-20px') {
@@ -117,7 +117,6 @@ const VideoCall = () => {
             })
         }
     }
-    let k = 0
 
     return (
         <>
@@ -142,7 +141,7 @@ const VideoCall = () => {
                 <div className="participants" id="vc-section" style={Style} >
                     <div className="participants-container">
                         {
-                            (Array.from(users)).map(str => <UserCall key={str.id} stream={str} />)
+                            (Array.from(users)).map(str => <UserCall key={str.connectionId} call={str} />)
                         }
                     </div>
                 </div>

@@ -1,15 +1,20 @@
 import React, { useRef } from 'react';
-import { useEffect } from 'react';
-import { FaVideo, FaVolumeMute } from 'react-icons/fa';
+import { FaVolumeMute } from 'react-icons/fa';
 import './style/userCall.css'
 
-const UserCall = ({ stream }) => {
+const UserCall = ({ call }) => {
 
     const videoRef = useRef();
 
-    useEffect(() => {
+    const muteAudio = ()=>{
+        var state = videoRef.current.muted;
+        videoRef.current.muted = !state;
+    }
+
+
+    call.on('stream', stream => {
         videoRef.current.srcObject = stream;
-    }, [videoRef.current])
+    })
 
 
     return (
@@ -17,11 +22,8 @@ const UserCall = ({ stream }) => {
             <div className="participant">
                 <video className="participant-video" ref={videoRef} autoPlay />
                 <div className="participants-icons">
-                    <div className="mic-icon">
+                    <div onClick={()=>muteAudio()} className="mic-icon">
                         <FaVolumeMute />
-                    </div>
-                    <div className="video-icon">
-                        <FaVideo />
                     </div>
                 </div>
             </div>

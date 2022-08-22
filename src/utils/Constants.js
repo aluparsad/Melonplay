@@ -3,7 +3,7 @@ const baseUrl = "https://melonplay.herokuapp.com/"
 const PORT = '22145'
 // const PORT = '3001'
 const socketAddress = `${baseUrl}`
-// const socketAddress = `${baseUrl}:${PORT}`
+
 
 const peerOpt = {
     host:baseUrl,
